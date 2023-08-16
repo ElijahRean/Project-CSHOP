@@ -2,22 +2,31 @@
 @import "sidebar.css";
 @import "slider.css";
 @import "header.css";
+@import "product-list.css";
 
 
 *, *:before, *:after {
     box-sizing: border-box;
 
   }
+body {
+    background: rgb(225,172,238);
+    background: linear-gradient(0deg, rgba(225,172,238,1) 0%, rgba(231,240,253,1) 19%, rgba(231,240,253,1) 73%, rgba(172,203,238,1) 100%);
+}
 
 .footer {
     margin-top: 20px;
     margin-bottom: 20px;
+    background: rgb(255,219,219);
+    background: linear-gradient(0deg, rgba(255,219,219,1) 0%, rgba(255,188,188,1) 100%);
+
 }
 
 .footer__container {
     display: grid;
     grid-template-columns: 1fr repeat(4, 200px) 1fr;
     justify-content: center;
+    
 }
 
 
@@ -109,37 +118,14 @@
 .social__logo svg:hover {
     color: #f5acff;
 }
-/* product list */
-.product-card {
-    border: 0;
-    border-radius: 20%;
-    padding: 15px;
-    text-align: center;
-    margin-bottom: 20px;
-}
 
-.product-img {
-    width: 250px;
-    height: 250px;
-    border-radius: 50%;
-    box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;
-    object-fit: cover;
-    margin: 0 auto 10px;
-}
-
-
-.product-price {
-    font-weight: bold;
-    margin-top: 5px;
-}
-
-    .slider-nav {
+.slider-nav {
         bottom: 1rem; /* Adjust position of navigation for mobile */
-    }
+}
 
-    .slider-nav a {
+.slider-nav a {
         width: 0.25rem; /* Make navigation dots smaller for mobile */
         height: 0.25rem;
-    }
+ }
 
 
