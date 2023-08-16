@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-  <head>
+<head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
@@ -9,16 +9,16 @@
 
     <link rel="stylesheet" href="{{asset('css/app.css')}}">
     <title>Candy</title>
-  </head>
+</head>
 
-  <body>
+<body>
 
 
     <!-- header section -->
     {{-- @yield('content') --}}
 
     <!-- slider section -->
-    {{-- @yield('contactform') --}}
+    @include('slider.slider')
 
     <!-- item list section -->
     @include('partials.products')
@@ -26,15 +26,19 @@
         <!-- sidebarsection -->
     {{-- @include('partials.footer.footer') --}}
 
-        <!-- footer section -->
-        @include('partials.footer.footer')
+    <!-- footer section -->
+    @include('partials.footer.footer')
 
     <!-- Include your JavaScript files if needed -->
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
 </body>
 
-  <script>
+<script>
 
-  </script>
+</script>
 
 </html>
+
+<?php
+
+?>
