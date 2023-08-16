@@ -1,5 +1,8 @@
+
+@import "sidebar.css";
 @import "slider.css";
 @import "header.css";
+
 
 *, *:before, *:after {
     box-sizing: border-box;
