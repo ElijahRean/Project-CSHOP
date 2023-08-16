@@ -21,7 +21,7 @@
     @include('slider.slider')
 
     <!-- item list section -->
-    {{-- @include('partials.footer.footer') --}}
+    @include('partials.products')
 
         <!-- sidebarsection -->
     {{-- @include('partials.footer.footer') --}}
