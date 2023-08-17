@@ -2,7 +2,7 @@
 
 :root{
     --header-height: 3rem;
-    --nav-width: 68px;
+    --nav-width: 58px;
     --first-color: #3394d3;
     --first-color-light: #fff;
     --white-color: #F7F6FB;
@@ -25,7 +25,8 @@
         background-color: var(--first-color);
         padding: .25rem 5rem 0 0;
         transition: .5s;
-        z-index: var(--z-fixed)
+        z-index: var(--z-fixed);
+        border-radius: 0 40px 0 0;
     }
 
     .nav{
@@ -35,13 +36,16 @@
         justify-content: space-between;
         overflow: hidden
     }
-
-     .nav_link{
+    .nav_name i{
+        padding-right:20px
+    }
+    .nav_link{
         display: grid;
         grid-template-columns: max-content max-content;
         align-items: center;
         column-gap: 0.5rem;
-        padding: .25rem 0 .25rem 0.75rem
+        padding: .25rem 0 .25rem 0.75rem;
+        text-decoration: none;
     }
 
     .nav_logo-icon{
