@@ -6,10 +6,13 @@
 @import "product_list.css";
 
 
+
 *, *:before, *:after {
     box-sizing: border-box;
 }
-
+body {
+    background: linear-gradient(0deg, rgb(255, 255, 255) 0%, rgba(231,240,253,1) 19%, rgba(231,240,253,1) 73%, rgba(172,203,238,1) 100%);
+}
 
 .footer {
     margin-top: 20px;
@@ -51,7 +54,7 @@
 
 .list__item {
     font-size: 14px;
-    box-shadow: inset 0 0 0 0 #f5acff;
+    box-shadow: inset 0 0 0 0 #3394d3;
     color: #696969;
     padding: 0.2rem .2rem;
     margin: 0.2 -.2rem;
@@ -61,7 +64,7 @@
 .list__item:hover {
 
     color: #fff;
-  box-shadow: inset 200px 0 0 0 #f5acff;
+  box-shadow: inset 200px 0 0 0 #3394d3;
   text-decoration: none;
 }
 
@@ -114,7 +117,7 @@
 } */
 
 .social__logo svg:hover {
-    color: #f5acff;
+    color: #3394d3;
 }
 
 @media (max-width:767px){
@@ -302,7 +305,7 @@
 }
 
 .rating span {
-    color: #f5acff;
+    color: #3394d3;
 }
 
 .product-name {
@@ -322,7 +325,7 @@
 
 .product-price:first-of-type {
     text-decoration: line-through;
-    color: #f5acff;
+    color: #3394d3;
 }
 
 .off-info .sm-title {
@@ -339,6 +342,7 @@
     letter-spacing: 3px;
     cursor: pointer;
 }
+
 
 
 
