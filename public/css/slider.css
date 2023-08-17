@@ -4,7 +4,7 @@
     overflow: hidden;
     position: relative;
     max-width: 64rem;
-    max-height: 20rem;
+    max-height: 15rem;
     margin: 0 auto;
     margin-top: 1rem;
 }
@@ -70,4 +70,14 @@
         max-height: none; /* Remove max-height for images */
         object-fit: cover; /* Crop images to cover entire slider */
     }
+
+    .slider-nav {
+        bottom: 1rem; /* Adjust position of navigation for mobile */
+    }
+
+    .slider-nav a {
+        width: 0.25rem; /* Make navigation dots smaller for mobile */
+        height: 0.25rem;
+    }
 }
+
