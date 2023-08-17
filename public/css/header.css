@@ -1,7 +1,8 @@
 .navbar {
-    background-color: white;
     position: static;
     top: 0;
+    border-radius: 0px 0px 40px 40px;
+    background: linear-gradient(180deg, rgb(255, 255, 255) 0%, rgb(236, 249, 255) 100%);
 }
 
 /* Media query dropdown */
@@ -42,27 +43,26 @@
     display: block;
 }
 
-
 /* Menu dropdown*/
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-  }
+}
 
-  .menuItem {
+.menuItem {
     display: block;
     margin: 2rem 4rem;
     font-size: 1.8rem;
     color: white;
     text-decoration: none;
-  }
+}
 
-  .menuItem:hover {
+.menuItem:hover {
     text-decoration: underline;
-  }
+}
 
-  .hamburger {
+.hamburger {
     position: fixed;
     z-index: 100;
     top: 1rem;
@@ -71,13 +71,13 @@
     border: black solid 1px;
     background: white;
     cursor: pointer;
-  }
+}
 
-  .closeIcon {
+.closeIcon {
     display: none;
-  }
+}
 
-  .menu {
+.menu {
     position: fixed;
     transform: translateY(-100%);
     transition: transform 0.2s;
@@ -90,9 +90,9 @@
     color: white;
     list-style: none;
     padding-top: 4rem;
-  }
+}
 
-  .showMenu {
+.showMenu {
     transform: translateY(0);
-  }
+}
 /* Menu dropdown end */
