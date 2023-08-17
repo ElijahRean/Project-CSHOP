@@ -1,10 +1,8 @@
 
 <div class="footer__links">
-    <div></div>
-    <div class="footer__copyright"><p>2023 All Rights Reserved</p></div>
-    <div></div>
+    <div class="footer__copyright">&copy; All Rights Reserved 2023</div>
     <div class="footer__socials">
-        <div class="footer__follow"><p>Follow us:</p></div>
+        {{-- <div class="footer__follow"><p>Follow us:</p></div> --}}
         <div class="social__logos">
             <a href="#" class="social__logo">
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
@@ -18,5 +16,4 @@
             </a>
         </div>
     </div>
-    <div></div>
 </div>
