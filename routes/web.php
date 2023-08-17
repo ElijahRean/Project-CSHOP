@@ -18,13 +18,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-<<<<<<< HEAD
 Route::get('/product/{productName}', [ProductController::class, 'show']);
 
-=======
 Route::get('/cart', function () {
     return view('cart/cart');
 });
-
-Route::get('/products/{productName}', [ProductController::class, 'show']);
->>>>>>> 59bf35c6cf6b4ffe5d0286de00d8cfaedc1902ab

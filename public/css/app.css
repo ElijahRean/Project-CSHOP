@@ -8,11 +8,7 @@
 
 *, *:before, *:after {
     box-sizing: border-box;
-<<<<<<< HEAD
-  }
-=======
 }
->>>>>>> 59bf35c6cf6b4ffe5d0286de00d8cfaedc1902ab
 
 
 .footer {
@@ -120,7 +116,6 @@
 .social__logo svg:hover {
     color: #f5acff;
 }
-<<<<<<< HEAD
 
 @media (max-width:767px){
     .footer__container {
@@ -344,7 +339,8 @@
     letter-spacing: 3px;
     cursor: pointer;
 }
-=======
+
+
 /* product list */
 .product-card {
     border: 0;
@@ -369,7 +365,5 @@
     margin-top: 5px;
 }
 
-
->>>>>>> 59bf35c6cf6b4ffe5d0286de00d8cfaedc1902ab
 
 
