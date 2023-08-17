@@ -167,11 +167,11 @@ body {
   }
   }
 
-  /* //////////// Product_page */
+  /*  Product_page
 
 .product__container {
     width: 80vw;
-    /* background-color: #f5acff; */
+    // background-color: #f5acff; //
     margin: 0 auto;
 }
 
@@ -232,14 +232,14 @@ body {
 }
 
 .product__img img {
-    /* background-color: rgb(255, 169, 241); */
+    // background-color: rgb(255, 169, 241); //
     box-shadow: 0 0 20px 10px rgba(199, 198, 198, 0.2);
 
     width: 300px;
     height: 300px;
     margin: 0 auto;
     border-radius: 50%;
-    /* transition: background 0.5s ease; */
+    // transition: background 0.5s ease; //
     margin-bottom: 20px;
     transition: transform 0.5s ease;
 }
@@ -342,7 +342,7 @@ body {
     letter-spacing: 3px;
     cursor: pointer;
 }
-
+*/
 
 
 
