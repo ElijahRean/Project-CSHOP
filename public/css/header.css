@@ -1,12 +1,10 @@
-
 .navbar {
-    overflow: hidden;
     background-color: white;
     position: fixed;
     top: 0;
 }
 
-.dropdown-container {
+.dropdown {
     position: relative;
     display: inline-block;
 }
@@ -31,7 +29,6 @@
     background-color: #f1f1f1
 }
 
-
-.dropdown-container:hover .dropdown-content {
+.dropdown:hover .dropdown-content {
     display: block;
 }
