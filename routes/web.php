@@ -18,8 +18,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/product/{productName}', [ProductController::class, 'show']);
+
 Route::get('/cart', function () {
     return view('cart/cart');
 });
-
-Route::get('/products/{productName}', [ProductController::class, 'show']);
