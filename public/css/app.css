@@ -1,9 +1,9 @@
 @import "slider.css";
+@import "cart.css";
 
 *, *:before, *:after {
     box-sizing: border-box;
-
-  }
+}
 
 .footer {
     margin-top: 20px;
@@ -129,13 +129,6 @@
     margin-top: 5px;
 }
 
-    .slider-nav {
-        bottom: 1rem; /* Adjust position of navigation for mobile */
-    }
 
-    .slider-nav a {
-        width: 0.25rem; /* Make navigation dots smaller for mobile */
-        height: 0.25rem;
-    }
 
 
