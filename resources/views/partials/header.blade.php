@@ -38,7 +38,7 @@
                 </ul>
             </div>
             <div class="col py-2">
-                <a href="#home" class="text-dark text-uppercase font-weight-bold">Candy Shop Placeholder</a>
+                <a href="#home" class="text-dark text-uppercase font-weight-bold">Candy <img src="{{url('/images/cshoplogo.png')}}" style="height:100px; width:100px" /> Shop</a>
             </div>
             <div class="col py-2">
                 <ul class="list-unstyled list-inline">
