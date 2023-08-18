@@ -34,3 +34,5 @@ Route::get('/about', function () {
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Route::post('/contact', [ContactFormController::class, 'send'])->name('contact.send');

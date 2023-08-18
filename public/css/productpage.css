@@ -1,3 +1,6 @@
+@import "baseline.css";
+
+
 .sections {
     position: relative;
     display: inline-block;
@@ -10,7 +13,7 @@
 
 .right-section {
     position: relative;
-    display: inline-block;
+    display:inline-block;
     vertical-align:middle;
     width: 50%;
     float: left;
@@ -20,7 +23,7 @@
 
 .main_img {
     flex: 1;
-    padding: 20px;
+    padding: 0;
     box-sizing: border-box;
     justify-content: right;
     align-items: center;
@@ -42,6 +45,7 @@
 .product__img_small img.img_sm1 {
     object-fit: cover;
     object-position: 120% 120%;
+    padding-right: 5px;
 }
 .product__img_small img.img_sm2 {
     object-fit: cover;
@@ -94,7 +98,7 @@
     font-weight: 300;
     font-size: 1rem;
     text-transform: uppercase;
-    text-align: right;
+    text-align: left;
 }
 
 .text__light {
@@ -120,9 +124,10 @@
     /* transition: background 0.5s ease; */
     transition: transform 0.5s ease;
     margin-bottom: 10px;
-    width: auto;
-    height: 340px;
+    width: 540px;
+    height: auto;
     justify-content: center;
+
 }
 
 .product:hover .product__img img {
@@ -161,8 +166,8 @@
 }
 
 .btn-cart {
-    background-color: #fff;
-    color: #333;
+    background-color: black;
+    color: #fff;
     padding-right: 10px;
 }
 
@@ -171,11 +176,11 @@
 }
 
 .btn-buy {
-    background-color: #fcaa2f;
+    background-color: var(--mainColorPink);
 }
 
 .btn-buy:hover {
-    background-color: rgb(241, 161, 86);
+    background-color: #3394d3;
     color: #fff;
 }
 
@@ -197,7 +202,7 @@
     font-size: 1rem;
     text-transform: uppercase;
     font-weight: bold;
-    text-align: right;
+    text-align: left;
 }
 
 .product-price {
@@ -226,4 +231,40 @@
     letter-spacing: 3px;
     cursor: pointer;
 }
+
+#quantityContainer {
+    display:flex;
+    align-items: center;
+    gap:10px;
+    padding-left: 4rem;
+}
+
+.quantity-btn {
+    background-color: transparent !important;
+    border: none;
+    width: 30px;
+    height: 24px;
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+
+}
+
+.quantity-btn:hover {
+    border: none;
+    background-color: #3394d3;
+
+}
+
+#quantityDisplay {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+
+
+
+
 
