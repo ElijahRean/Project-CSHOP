@@ -26,18 +26,21 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-
-
 </head>
 
 
 <body>
     <div>
+        {{-- Header --}}
+        @yield('header')
+
+        {{-- Content --}}
         <main class="">
-
-
             @yield('content')
         </main>
+
+        {{-- Footer --}}
+        @yield('footer')
     </div>
 </body>
 </html>

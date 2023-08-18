@@ -1,0 +1,56 @@
+@import "baseline.css";
+
+  .contact-form-wrapper {
+    padding: 100px 0;
+  }
+
+  .contact-form {
+    padding: 30px 40px;
+    background-color: var(--mainColorLightPink);
+    border-radius: 12px;
+    width: 800px;
+  }
+
+  .contact-form textarea {
+    resize: none;
+  }
+
+  .contact-form .form-input,
+  .form-text-area {
+    background-color: #fff;
+    height: 50px;
+    padding-left: 16px;
+  }
+
+  .contact-form .form-text-area {
+    background-color: #fff;
+    height: auto;
+    padding-left: 16px;
+  }
+
+  .contact-form .about__image {
+    width: 600px;
+    border-radius: 10px;
+  }
+
+  .contact-form .about__title {
+    text-align: center;
+    font-size: 28px;
+    font-weight: 500;
+    color: #333;
+  }
+
+  .contact-form .about__description {
+    color: #333;
+    font-size: 18px;
+    text-align: justify;
+    margin-left: 57px;
+    margin-right: 57px;
+}
+
+
+
+
+  @media (max-width: 650px){
+
+}

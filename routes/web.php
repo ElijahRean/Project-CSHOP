@@ -27,7 +27,9 @@ Route::get('/cart', function () {
     return view('cart/cart');
 });
 
-
+Route::get('/about', function () {
+    return view('about/about');
+});
 
 Auth::routes();
 
