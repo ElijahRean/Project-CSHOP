@@ -1,7 +1,7 @@
 @import "baseline.css";
 
 body {
-    background-color: #f5e0e5 !important;
+    /* background-color: #f5e0e5 !important; */
     /* font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif; */
   }
 
@@ -87,11 +87,5 @@ body {
 
 
   @media (max-width: 650px){
-    .footer__container {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(2, 1fr);
-        margin-left: 50px;
-        margin-right: 50px;
-  }
+
 }

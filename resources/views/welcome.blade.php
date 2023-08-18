@@ -27,9 +27,12 @@
     <!-- sidebarsection -->
     @include('sidebar.sidebar')
 
+        <!-- testimonials -->
+        @include('partials.testimonials.testimonials')
+
+
         <!-- contactform -->
     @include('partials.contactform.contactform')
-
 
         <!-- footer section -->
         @include('partials.footer.footer')
