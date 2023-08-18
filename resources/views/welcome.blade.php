@@ -24,9 +24,15 @@
     <!-- item list section -->
     @include('partials.products')
 
-        <!-- sidebarsection -->
-        @include('sidebar.sidebar')
+    <!-- sidebarsection -->
+    @include('sidebar.sidebar')
 
+        <!-- testimonials -->
+        @include('partials.testimonials.testimonials')
+
+
+        <!-- contactform -->
+    @include('partials.contactform.contactform')
 
         <!-- footer section -->
         @include('partials.footer.footer')

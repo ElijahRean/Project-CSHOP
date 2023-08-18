@@ -1,7 +1,4 @@
-html, body {
-    margin: 0;
-    height: 100%;
-}
+
 
 .top-nav {
     display: flex;
@@ -9,14 +6,18 @@ html, body {
     align-items: center;
     justify-content: space-between;
     background-color: #00BAF0;
-    background: linear-gradient(to left, #80eee0, #d0ebef);
+    background-color: var(--mainColorLightBlue);
+    background: linear-gradient(to right,var(--mainColorLightBlue),var(--mainColorBlue));
     color: #FFF;
     height: 50px;
     padding: 1em;
     box-sizing: border-box;
     text-transform: uppercase;
 }
-
+.logo {
+    width: 60px;
+    height: 60px;
+}
 .top-nav a {
     color: white;
 }
@@ -139,6 +140,8 @@ html, body {
     list-style-type: none;
     margin: 0;
     padding: 0;
+    justify-content: center;
+    align-items: center;
 }
 
 .horizontal-menu > li {
