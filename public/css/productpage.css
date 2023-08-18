@@ -61,7 +61,7 @@
     padding: 1rem 0;
     margin-left: 8%;
     margin-right: 8%;
-    margin-top:10%;
+    margin-top:4%;
     margin-bottom:5%;
     width: 90%;
     height:95%;
@@ -116,17 +116,12 @@
 .product__img img{
     /* background-color: rgb(255, 169, 241); */
     box-shadow: 0 0 20px 10px rgba(199, 198, 198, 0.2);
-
     border-radius: 10%;
     /* transition: background 0.5s ease; */
-
     transition: transform 0.5s ease;
-
-
     margin-bottom: 10px;
     width: auto;
     height: 340px;
-
     justify-content: center;
 }
 
