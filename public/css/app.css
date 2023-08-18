@@ -3,12 +3,7 @@
 @import "cart.css";
 @import "header.css";
 @import "product_list.css";
-<<<<<<< HEAD
-=======
 @import "baseline.css";
->>>>>>> 6830d7fdb322cbb63ad8db3061028939b1c984e4
-
-
 
 *, *:before, *:after {
     box-sizing: border-box;
@@ -37,10 +32,13 @@ body {
 }
 
 .footer__container hr{
-    width: 75%;
     border: 1px solid #999;
 }
 
+ul {
+    list-style: none;
+    padding-left: 0;
+}
 
 .nav__title {
     display: flex;
@@ -58,7 +56,6 @@ body {
 
 .footer__ul {
     text-decoration: none;
-
 }
 
 .nav__ul li {
@@ -126,10 +123,6 @@ body {
     color: #696969;
 
 }
-
-/* .social__logo.facebook svg {
-    margin-left: 10px;
-} */
 
 .social__logo svg:hover {
     color: #3394d3;
