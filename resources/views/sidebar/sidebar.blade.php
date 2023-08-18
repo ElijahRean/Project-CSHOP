@@ -3,33 +3,33 @@
             <div>
                 <a href="#" class="nav_link close-btn">
                     <i class='bx bx-x nav_icon' id="header-toggle"></i>
-                    <span class="nav_name">IMG</span>
+                    <span class="nav_name"><i class="fa-solid fa-circle-right"></i></i>Shop by color:</span>
                 </a>
 
                 <div class="nav_list">
                     <a href="#" class="nav_link active">
                         <i class='bx bx-grid-alt nav_icon'></i>
-                        <span class="nav_name">img - Text</span>
+                        <span class="nav_name"><i class="fa-solid fa-circle" style="color: #f0a338;"></i>orange</span>
                     </a>
                     <a href="#" class="nav_link">
                         <i class='bx bx-user nav_icon'></i>
-                        <span class="nav_name">img - Text</span>
+                        <span class="nav_name"><i class="fa-solid fa-circle" style="color: #2474ff;"></i>blue</span>
                     </a>
                     <a href="#" class="nav_link">
                         <i class='bx bx-message-square-detail nav_icon'></i>
-                        <span class="nav_name">img - Text</span>
+                        <span class="nav_name"><i class="fa-solid fa-circle" style="color: #ff0000;"></i>red</span>
                     </a>
                     <a href="#" class="nav_link">
                         <i class='bx bx-bookmark nav_icon'></i>
-                        <span class="nav_name">img - Text</span>
+                        <span class="nav_name"><i class="fa-solid fa-circle" style="color: #2ccf17;"></i>green</span>
                     </a>
                     <a href="#" class="nav_link">
                         <i class='bx bx-folder nav_icon'></i>
-                        <span class="nav_name">img - Text</span>
+                        <span class="nav_name"><i class="fa-solid fa-circle" style="color: #cc3dd6;"></i>pink</span>
                     </a>
                     <a href="#" class="nav_link">
                         <i class='bx bx-bar-chart-alt-2 nav_icon'></i>
-                        <span class="nav_name">img - Text</span>
+                        <span class="nav_name"></span>
                     </a>
                 </div>
             </div>

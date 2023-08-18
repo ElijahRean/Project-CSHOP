@@ -1,10 +1,12 @@
 .cart-container{
     border-radius: 1.5rem;
     box-shadow: 0px 0px 30px 5px #cfcfcf;
-    position: absolute;
+    /* position: absolute;
     top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    left: 50%; */
+    /* transform: translate(35%); */
+    margin: auto;
+    max-width: 50rem;
     min-width: 45rem;
     display: flex;
     flex-direction: column;

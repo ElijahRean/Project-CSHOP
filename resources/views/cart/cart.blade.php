@@ -4,15 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Cart</title>
-    <link rel="stylesheet" href="{{asset('css/app.css')}}">
+    {{-- Bootstrap + Font Awesome Kit--}}
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/4c7fd93af7.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="{{asset('css/app.css')}}">
 </head>
 <body>
 
     @include('partials.header');
     @include('sidebar.sidebar');
-    {{-- @include('partials.footer.footer'); --}}
 
     <div class="cart-container">
         <div class="cart-header">
@@ -66,5 +66,6 @@
             <button class="cart-checkout">Checkout</button>
         </div>
     </div>
+    @include('partials.footer.footer');
 </body>
 </html>
