@@ -39,7 +39,7 @@ html, body {
     margin: 0;
     padding: 0;
     box-shadow: 0px 0px 10px 0px rgba(0,0,0,.4);
-    position: absolute;
+    position: fixed;
     top: 0;
     height: 100vh;
     padding-top: 50px;
@@ -56,13 +56,17 @@ html, body {
 }
 
 .menu-button-container {
-    display: none;
+    /* display: none; */
     height: 100%;
     width: 30px;
     cursor: pointer;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    display: flex;
+    z-index: 2;
+    padding: 20px 30px;
+    margin-bottom: 0;
 }
 
 #menu-toggle {
@@ -103,11 +107,6 @@ html, body {
 #menu-toggle:checked + .menu-button-container .menu-button::after {
     margin-top: 0px;
     transform: rotate(-405deg);
-}
-
-.menu-button-container {
-    display: flex;
-    z-index: 2;
 }
 
 #menu-toggle ~ .menu {
