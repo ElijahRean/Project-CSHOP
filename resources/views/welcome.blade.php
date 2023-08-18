@@ -27,6 +27,9 @@
         <!-- sidebarsection -->
         @include('sidebar.sidebar')
 
+        <!-- contactform -->
+    @include('partials.contactform.contactform')
+
 
         <!-- footer section -->
         @include('partials.footer.footer')
