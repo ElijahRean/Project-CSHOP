@@ -7,6 +7,7 @@
     max-height: 15rem;
     margin: 0 auto;
     margin-top: 1rem;
+    border-radius: 40px 40px 40px 40px;
 }
 
 .slider {
