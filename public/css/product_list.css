@@ -1,0 +1,23 @@
+/* product list */
+.product-card {
+    border: 0;
+    border-radius: 20%;
+    padding: 15px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.product-img {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;
+    object-fit: cover;
+    margin: 0 auto 10px;
+}
+
+
+.product-list-price {
+    font-weight: bold;
+    margin-top: 5px;
+}
