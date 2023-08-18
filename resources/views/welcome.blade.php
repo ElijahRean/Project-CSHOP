@@ -24,12 +24,11 @@
     <!-- item list section -->
     @include('partials.products')
 
-        <!-- sidebarsection -->
-        @include('sidebar.sidebar')
+    <!-- sidebarsection -->
+    @include('sidebar.sidebar')
 
-
-        <!-- footer section -->
-        @include('partials.footer.footer')
+    <!-- footer section -->
+    @include('partials.footer.footer')
 
     <!-- Include your JavaScript files if needed -->
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>

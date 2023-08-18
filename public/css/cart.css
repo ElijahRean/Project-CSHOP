@@ -1,0 +1,136 @@
+.cart-container{
+    border-radius: 1.5rem;
+    box-shadow: 0px 0px 30px 5px #cfcfcf;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 45rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+}
+
+.cart-body {
+    overflow: auto;
+    max-height: 35rem;
+    margin-bottom: 0.5rem;
+}
+
+::-webkit-scrollbar {
+    width: 1rem;
+}
+
+  /* Track */
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey;
+    border-radius: 10px;
+}
+
+  /* Handle */
+::-webkit-scrollbar-thumb {
+    background: rgb(212, 212, 212);
+    border-radius: 10px;
+}
+
+  /* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: rgb(172, 172, 172);
+}
+
+.cart-header, .cart-item, .cart-item-quantity-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.cart-header{
+    padding-bottom: 1rem;
+    padding-right: 0.5rem;
+}
+
+.cart-item {
+    padding: 0.5rem 1rem 1rem 0.5rem;
+}
+
+.cart-item img{
+    max-height: 6rem;
+}
+
+.cart-item-info, .cart-item-price-container{
+    align-self: center;
+}
+
+
+.cart-item-quantity-container *{
+    align-self: center;
+    margin: 0.5rem;
+}
+
+.cart-item-quantity-increase, .cart-item-quantity-decrease {
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    background-color: rgb(212, 212, 212);
+}
+
+.cart-item-quantity-increase:hover, .cart-item-quantity-decrease:hover{
+    background: rgb(172, 172, 172);
+}
+
+.cart-item-price-container{
+    display: flex;
+    flex-direction: column;
+}
+
+.cart-item-price, .cart-footer{
+    align-self: flex-end;
+}
+
+.cart-footer {
+    width: 75%;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    border-top: 1px solid rgb(156, 156, 156);
+}
+
+.cart-total {
+    padding: 0.5rem 1rem 0.5rem 0.5rem;
+    align-self: flex-end;
+}
+
+.cart-checkout {
+    align-self: flex-end;
+    background-color: rgb(103, 162, 240);
+    border: none;
+    border-radius: 2rem;
+    padding: 10px 40px;
+    cursor: pointer;
+}
+
+.cart-checkout:hover {
+    background-color: rgb(88, 153, 238);
+}
+
+/* Media query for tablet */
+@media screen and (max-width: 1024px) {
+    .cart-container{
+        min-width: 35rem;
+    }
+}
+
+/* Media query for mobile */
+@media screen and (max-width: 768px) {
+    .cart-container{
+        min-width: 30rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .cart-container{
+        min-width: auto;
+    }
+}
