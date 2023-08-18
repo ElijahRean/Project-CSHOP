@@ -14,7 +14,10 @@
     box-sizing: border-box;
     text-transform: uppercase;
 }
-
+.logo {
+    width: 60px;
+    height: 60px;
+}
 .top-nav a {
     color: white;
 }
