@@ -18,7 +18,7 @@ use App\Http\Controllers\RegisterController;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('home');
 });
 
 Route::get('/product/{productName}', [ProductController::class, 'show']);
@@ -27,11 +27,6 @@ Route::get('/cart', function () {
     return view('cart/cart');
 });
 
-Route::get('/login', [UserController::class, 'showLoginForm'])->name('login');
-Route::post('/login', [UserController::class, 'auth']);
-Route::post('/logout', [UserController::class, 'logout'])->name('logout');
-
-Route::get('/register', [RegisterController::class, 'showRegistrationForm'])->name('register');
 
 
 Auth::routes();
