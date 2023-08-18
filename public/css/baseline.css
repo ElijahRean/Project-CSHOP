@@ -1,0 +1,11 @@
+
+/* Project colors */
+:root {
+    --mainColorLightVelvet: rgba(205, 180, 219);
+    --mainColorLightPink: rgba(255, 200, 221);
+    --mainColorPink: rgba(255, 175, 204);
+    --mainColorLightBlue: rgba(189, 224, 254);
+    --mainColorBlue: rgba(162, 210, 255);
+    --colorLightBlack: #333;
+}
+

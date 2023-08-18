@@ -44,7 +44,7 @@
                 <ul class="list-unstyled list-inline">
                     <li class="list-inline-item px-2"><a href="#cart" class="text-dark text-uppercase">Cart</a></li>
                     <li class="list-inline-item px-2"><a href="#wishlist" class="text-dark text-uppercase">&#x2661;</a></li>
-                    <li class="list-inline-item px-2"><a href="#login" class="text-dark text-uppercase">Login</a></li>
+                    <li class="list-inline-item px-2"><a href="{{ route('login')}}" class="text-dark text-uppercase">Login</a></li>
                     <li class="list-inline-item px-2"><a href="#search" class="text-dark text-uppercase">&#x1F50E</i></a></li>
                     <li class="list-inline-item px-2"><a href="#menu" class="text-dark text-uppercase">Menu</a></li>
                 </ul>
