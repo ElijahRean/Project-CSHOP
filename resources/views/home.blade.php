@@ -1,10 +1,11 @@
 @extends('layouts.app')
 
-@section('content')
-
-
+@section('header')
     <!-- header section -->
     @include('partials.header')
+@endsection
+
+@section('content')
 
     <!-- slider section -->
     @include('slider.slider')
@@ -18,13 +19,11 @@
     <!-- testimonials -->
     @include('partials.testimonials.testimonials')
 
-
     <!-- contactform -->
     @include('partials.contactform.contactform')
+@endsection
 
+@section('footer')
     <!-- footer section -->
     @include('partials.footer.footer')
-
-    <!-- Include your JavaScript files if needed -->
-    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
 @endsection
