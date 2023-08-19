@@ -7,7 +7,13 @@
     --mainColorLightBlue: rgba(189, 224, 254);
     --mainColorBlue: rgba(162, 210, 255);
     --colorLightBlack: #333;
+
+    --cottonCandyPink: #ff71b2;
+    --cottonCandyLightPink: #ffb8d8;
+    --cottonCandyBlue: #509be1;
 }
+
+
 
 /* Main font */
 body {
