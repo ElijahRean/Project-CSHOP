@@ -1,31 +1,25 @@
-
-<section class="top-nav">
-        <div>
-        <img src="{{url('/images/cshoplogo.png')}}" alt="logotype" class="logo"><a href="home">Candy Shop Placeholder</a>
-        </div>
-
-        <div class="right-size">
-            <ul class="horizontal-menu">
-                <li>
-                    <div class="searchInputWrapper">
-                        <input class="searchInput" type="text" placeholder='Search'>
-                        </input>
-                    </div>
+<header>
+    <div class="background"></div>
+    <div class="logoSection">
+        <img src="{{url('/images/shopLogo.svg')}}" class="filterLogo"/>
+    </div>
+    <nav class="top-nav">
+        <ul class="menu">
+                <li class="has-submenu">
+                    <a href="#">Catalogue</a>
+                    <ul class="submenu">
+                        <li><a href="#">Chocolates</a></li>
+                        <li><a href="#">Caramel candies</a></li>
+                        <li><a href="#">Weird candies</a></li>
+                    </ul>
                 </li>
-                <li><a href="#cart">Cart</a></li>
-                <li><i class="fa-solid fa-heart"></i></li>
-                <li><a href="#login">Login</a></li>
             </ul>
-            <input id="menu-toggle" type="checkbox" />
-            <label class='menu-button-container' for="menu-toggle">
-                <div class='menu-button'></div>
-            </label>
-            <ul class="menu">
-                <li><a href="#item1">Item 1</a></li>
-                <li><a href="#item2">Item 2</a></li>
-                <li><a href="#item3">Item 3</a></li>
-                <li><a href="#item4">Item 4</a></li>
-                <li><a href="#item5">Item 5</a></li>
-            </ul>
-        </div>
-    </section>
+            <div class="rightSide">
+            <input type="text" placeholder="hunt for sugar..">
+                <div class="icons">
+                    <i class="fas fa-shopping-cart" style="color: #fff;"></i>
+                    <i class="fas fa-user" style="color: #fff;"></i>
+                </div>
+            </div>
+    </nav>
+</header>
