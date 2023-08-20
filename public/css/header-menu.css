@@ -1,0 +1,121 @@
+/* global  styles */
+.top-nav a {
+    white-space: nowrap;
+}
+
+.submenu,
+.top-nav input[type="checkbox"] {
+    display: none;
+}
+
+.top-nav {
+    position: relative;
+}
+
+.has-submenu label {
+    margin: 0;
+    cursor: pointer;
+}
+
+/* narrow styles */
+@media screen and (max-width: 1024px) {
+    .top-nav > .menu {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        z-index: 100;
+        background-color:#ffb8d8;
+        padding: 8px 0;
+        width: 100%;
+    }
+
+    input[type="checkbox"]:checked + .menu {
+        display: block;
+    }
+
+    .menu li {
+        text-align: left;
+        padding: 15px 15px 15px 30px;
+    }
+
+    .has-submenu {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    .menu .submenu {
+        position: static;
+        margin: 20px -15px 0 -30px;
+        width: calc(100% + 45px);
+    }
+
+    .has-submenu:hover input[type="checkbox"]:not(:checked) + .submenu {
+        display: none;
+    }
+
+    .has-submenu input[type="checkbox"]:checked + .submenu {
+        display: block;
+    }
+
+    .submenu li a {
+       padding-left: 0;
+    }
+
+    .top-nav > label {
+        background: #FF71B2;
+        display: block;
+        padding: 0;
+        text-align: right;
+        margin: 0;
+        font-size: 24px;
+        width: 50px;
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+    }
+     
+    .top-nav > ul i {
+        padding: 0px 10px;
+    }
+}
+  
+/* large styles */
+@media screen and (min-width: 1025px) {
+    /* hide show navigation button and checkboxes */
+    .top-nav > label,
+    input[type="checkbox"] {
+      display: none;
+    }
+
+    .top-nav a {
+      padding: 15px 20px;
+    }
+
+    .top-nav > ul > li {
+      display: inline-block;
+    }
+
+    /* dropdown position and style*/
+    .has-submenu > ul {
+      position: absolute;
+      top: 100%;
+      left: 3%;
+      background: #ffb8d8;
+    }
+
+    .top-nav {
+        max-width: 1024px;
+        margin: 0 auto;
+    }
+
+    .has-submenu > a {
+        padding-right: 0;
+    }
+} 
+  
