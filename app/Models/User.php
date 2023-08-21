@@ -7,10 +7,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Fortify\TwoFactorAuthenticatable;
-<<<<<<< HEAD
 use Laravel\Jetstream\HasProfilePhoto;
-=======
->>>>>>> 6830d7fdb322cbb63ad8db3061028939b1c984e4
 use Laravel\Sanctum\HasApiTokens;
 
 class User extends Authenticatable
@@ -19,7 +16,7 @@ class User extends Authenticatable
     use HasFactory;
     use HasProfilePhoto;
     use Notifiable;
-    use TwoFactorAuthenticatable;
+    // use TwoFactorAuthenticatable;
 
     /**
      * The attributes that are mass assignable.
@@ -31,6 +28,11 @@ class User extends Authenticatable
         'email',
         'password',
     ];
+
+    public function isAdmin()
+    {
+        return $this->isAdmin;
+    }
 
     /**
      * The attributes that should be hidden for serialization.

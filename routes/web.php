@@ -2,9 +2,11 @@
 
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\HomeController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\RegisterController;
+use App\Http\Controllers\ContactFormController;
 
 /*
 |--------------------------------------------------------------------------
@@ -36,6 +38,13 @@ Route::get('/about', function () {
 
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::middleware(['auth', AdminMiddleware::class])->group(function () {
+    Route::get('/adminpanel', function () {
+        return view('adminpanel');
+    });
+});
 
-Route::post('/contact', [ContactFormController::class, 'send'])->name('contact.send');
+Route::get('/home', [HomeController::class, 'index'])->name('home');
+
+Route::post('/contact', [ContactFormController::class, 'sendContactForm'])->name('contact.send');
+
