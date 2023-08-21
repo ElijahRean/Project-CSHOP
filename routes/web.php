@@ -23,7 +23,7 @@ Route::get('/', function () {
 
 // Route::get('/product/{productName}', [ProductController::class, 'show']);
 Route::get('/product', function () {
-    return view('products/ProductDetailsPage');
+    return view('products/productDetailsPage');
 });
 
 Route::get('/cart', function () {
