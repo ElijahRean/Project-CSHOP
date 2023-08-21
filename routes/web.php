@@ -38,6 +38,8 @@ Route::get('/about', function () {
     return view('about/about');
 });
 
+Route::get('/test', [\App\Http\Controllers\CandyController::class, 'index'])->name('test/products-test');
+
 Auth::routes();
 
 Route::middleware(['auth', 'admin'])->group(function () {

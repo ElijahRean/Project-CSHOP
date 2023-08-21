@@ -12,7 +12,7 @@
 
     <!-- item list section -->
     @include('partials.products')
-
+    
     <!-- sidebarsection 
     @include('sidebar.sidebar') -->
 
