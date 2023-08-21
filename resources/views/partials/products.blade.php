@@ -1,53 +1,84 @@
-<div class="text-center container py-5">
-    <h4 class="mt-4 mb-5"><strong>Product listing page</strong></h4>
-        <div class="row">
-            <div class="col-lg-4 col-md-6 col-sm-12">
-                <div class="product-card">
-                    <img src="{{url('/images/4.webp')}}"  alt="Product 1" class="product-img">
-                    <h3>Product 1</h3>
-                    <p class="product-list-price">$19.99</p>
-                    <a href="#"><i class="fa-solid fa-cart-shopping fa-xl" style="color: #162f5a;"></i></a>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 col-sm-12">
-                <div class="product-card">
-                    <img src="{{url('/images/6.webp')}}" alt="Product 2" class="product-img">
-                    <h3>Product 2</h3>
-                    <p class="product-list-price">$29.99</p>
-                    <a href="#"><i class="fa-solid fa-cart-shopping fa-xl" style="color: #162f5a;"></i></a>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 col-sm-12">
-                <div class="product-card">
-                    <img src="{{url('/images/5.webp')}}"  alt="Product 3" class="product-img">
-                    <h3>Product 3</h3>
-                    <p class="product-list-price">$24.99</p>
-                    <a href="#"><i class="fa-solid fa-cart-shopping fa-xl" style="color: #162f5a;"></i></a>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 col-sm-12">
-                <div class="product-card">
-                    <img src="{{url('/images/7.webp')}}"  alt="Product 4" class="product-img">
-                    <h3>Product 4</h3>
-                    <p class="product-list-price">$24.99</p>
-                    <a href="#"><i class="fa-solid fa-cart-shopping fa-xl" style="color: #162f5a;"></i></a>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 col-sm-12">
-                <div class="product-card">
-                    <img src="{{url('/images/2.webp')}}"  alt="Product 5" class="product-img">
-                    <h3>Product 5</h3>
-                    <p class="product-list-price">$24.99</p>
-                    <a href="#"><i class="fa-solid fa-cart-shopping fa-xl" style="color: #162f5a;"></i></a>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 col-sm-12">
-                <div class="product-card">
-                    <img src="{{url('/images/1.webp')}}"  alt="Product 6" class="product-img">
-                    <h3>Product 6</h3>
-                    <p class="product-list-price">$24.99</p>
-                    <a href="#"><i class="fa-solid fa-cart-shopping fa-xl" style="color: #162f5a;"></i></a>
-                </div>
-            </div>
+<div class="container">
+  <div class="row">
+    <!-- item 1 -->
+    <div class="col-xl-3 col-md-4 col-sm-6 mb-4">
+      <div class="card">
+      <img src="{{url('/images/1.webp')}}"  alt="Product 1" class="product-img">
+        <div class="card-body text-center">
+          <h4 class="card-title mb-2">Ginger Candy</h4>
+          <div class="card-text">$9.99 | <a href="#" class="list__item"><i class="fas fa-shopping-cart" ></i> Add to Cart</a></div>
         </div>
+      </div>
+    </div>
+    <!-- Item 2 -->
+    <div class="col-xl-3 col-md-4 col-sm-6 mb-4">
+      <div class="card">
+      <img src="{{url('/images/2.webp')}}"  alt="Product 1" class="product-img">
+        <div class="card-body text-center">
+          <h4 class="card-title mb-2">Japanese kitkats</h4>
+          <div class="card-text">$9.99 | <a href="#" class="list__item"><i class="fas fa-shopping-cart" ></i> Add to Cart</a></div>
+        </div>
+      </div>
+    </div>
+    <!-- Item 3 -->
+    <div class="col-xl-3 col-md-4 col-sm-6 mb-4">
+      <div class="card">
+      <img src="{{url('/images/3.webp')}}"  alt="Product 1" class="product-img">
+        <div class="card-body text-center">
+          <h4 class="card-title mb-2">Haw Flakes</h4>
+          <div class="card-text">$9.99 | <a href="#" class="list__item"><i class="fas fa-shopping-cart" ></i> Add to Cart</a></div>
+        </div>
+      </div>
+    </div>
+    <!-- Item 4 -->
+    <div class="col-xl-3 col-md-4 col-sm-6 mb-4">
+      <div class="card">
+      <img src="{{url('/images/4.webp')}}"  alt="Product 1" class="product-img">
+        <div class="card-body text-center">
+          <h4 class="card-title mb-2">Ume Candy</h4>
+          <div class="card-text">$9.99 | <a href="#" class="list__item"><i class="fas fa-shopping-cart" ></i> Add to Cart</a></div>
+        </div>
+      </div>
+    </div>
+    <!-- Item 1 -->
+    <div class="col-xl-3 col-md-4 col-sm-6 mb-4">
+      <div class="card">
+      <img src="{{url('/images/5.webp')}}"  alt="Product 1" class="product-img">
+        <div class="card-body text-center">
+          <h4 class="card-title mb-2">Li Hing Mui Drops</h4>
+          <div class="card-text">$9.99 | <a href="#" class="list__item"><i class="fas fa-shopping-cart" ></i> Add to Cart</a></div>
+        </div>
+      </div>
+    </div>
+    <!-- Item 2 -->
+    <div class="col-xl-3 col-md-4 col-sm-6 mb-4">
+      <div class="card">
+      <img src="{{url('/images/6.webp')}}"  alt="Product 1" class="product-img">
+        <div class="card-body text-center">
+          <h4 class="card-title mb-2">Lychee Jelly</h4>
+          <div class="card-text">$9.99 | <a href="#" class="list__item"><i class="fas fa-shopping-cart" ></i> Add to Cart</a></div>
+        </div>
+      </div>
+    </div>
+    <!-- Item 3 -->
+    <div class="col-xl-3 col-md-4 col-sm-6 mb-4">
+      <div class="card">
+      <img src="{{url('/images/7.webp')}}"  alt="Product 1" class="product-img">
+        <div class="card-body text-center">
+          <h4 class="card-title mb-2">Coconut candy</h4>
+          <div class="card-text">$9.99 | <a href="#" class="list__item"><i class="fas fa-shopping-cart" ></i> Add to Cart</a></div>
+        </div>
+      </div>
+    </div>
+    <!-- Item 4 -->
+    <div class="col-xl-3 col-md-4 col-sm-6 mb-4">
+      <div class="card">
+      <img src="{{url('/images/9.webp')}}"  alt="Product 1" class="product-img">
+        <div class="card-body text-center">
+          <h4 class="card-title mb-2">Mokomoko Mokolet</h4>
+          <div class="card-text">$9.99 | <a href="#" class="list__item"><i class="fas fa-shopping-cart" ></i> Add to Cart</a></div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>

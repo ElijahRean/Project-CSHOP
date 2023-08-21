@@ -2,6 +2,12 @@
     <div class="background"></div>
     <div class="logoSection">
         <img src="{{url('/images/shopLogo.svg')}}" class="filterLogo"/>
+        <div class="socialMedia icons">
+        <a href="#"><i class="fa-brands fa-x-twitter fa-xl"></i></a>
+        <a href="#"><i class="fa-brands fa-instagram fa-xl"></i></a>
+        <a href="#"><i class="fa-brands fa-facebook fa-xl"></i></a>
+        <a href="#"><i class="fa-solid fa-circle-radiation fa-xl" id="theme-toggle"></i></a>
+        </div>
     </div>
     <nav class="top-nav">
         <label for="menu">

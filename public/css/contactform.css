@@ -7,11 +7,13 @@ body {
 
   .contact-form-wrapper {
     padding: 100px 0;
+    
   }
 
   .contact-form {
     padding: 30px 40px;
-    background-color: var(--mainColorLightPink);
+    background: linear-gradient(315deg, var(--white) 0%, var(--cottonCandyTeaRose) 100%);
+    border:2px solid var(--cottonCandyTeaRose);
     border-radius: 12px;
     max-width: 800px;
   }
@@ -51,7 +53,7 @@ body {
 
   .contact-form .form-control:focus {
     border-color: var(--mainColorPink);
-    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.07), 0 0 8px #f33fb0;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.07), 0 0 8px var(--cottonCandyDeepPink);
   }
 
   .contact-form .title {
@@ -73,7 +75,7 @@ body {
   .contact-form .submit-button-wrapper input {
     border: none;
     border-radius: 4px;
-    background-color: #f23292;
+    background-color: var(--cottonCandyDeepPink);
     color: white;
     text-transform: uppercase;
     padding: 10px 60px;
@@ -82,7 +84,7 @@ body {
   }
 
   .contact-form .submit-button-wrapper input:hover {
-    background-color: #d30069;
+    background-color: var(--cottonCandyDeepPink);
   }
 
 

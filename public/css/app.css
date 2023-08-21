@@ -2,15 +2,12 @@
 @import "slider.css";
 @import "cart.css";
 @import "header.css";
-@import "product_list.css";
+@import "productListingPage.css";
 @import "baseline.css";
+@import "productDetailsPage.css";
 
 *, *:before, *:after {
     box-sizing: border-box;
-}
-
-body {
-    background: #fff;
 }
 
 /* to make icons render propertly */
@@ -20,19 +17,20 @@ body {
     -webkit-font-smoothing: antialiased;
   }
 
+.footer-background {
+    background: var(--white);
+    background: radial-gradient(circle at bottom, var(--white) , var(--cottonCandyTeaRose));
+}
 .footer {
-    margin-top: 20px;
-    margin-bottom: 20px;
+    max-width:1200px;
+    margin: 20px auto 0px;
+    border-top: 2px solid var(--cottonCandyLightPink);
 }
 
 .footer__container {
     display: grid;
     grid-template-columns: repeat(4, 200px);
     justify-content: center;
-}
-
-.footer__container hr{
-    border: 1px solid #999;
 }
 
 ul {
@@ -66,21 +64,35 @@ ul {
 
 .list__item {
     font-size: 14px;
-    box-shadow: inset 0 0 0 0 #3394d3;
-    color: #696969;
-    padding: 0.2rem .2rem;
+    color: #666;
+    padding: 0.4rem .2rem;
     margin: 0.2 -.2rem;
-    transition: color .5s ease-in-out, box-shadow .5s ease-in-out;
+    transition: color .2s ease-in-out, border-bottom-width .2s ease-in-out;
+    position: relative;
+    overflow: hidden;
 }
 
 .list__item:hover {
-
-    color: #fff;
-  box-shadow: inset 200px 0 0 0 #3394d3;
-  text-decoration: none;
+    color: var(--cottonCandyDeepPink);
+    text-decoration:none;
 }
 
+.list__item::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px; /* Set the desired underline height */
+    background-color: var(--cottonCandyDeepPink);
+    transform: scaleX(0); /* Initially hidden */
+    transform-origin: left;
+    transition: transform .2s ease-in-out;
+}
 
+.list__item:hover::after {
+    transform: scaleX(1); /* Expand to show underline */
+}
 
 .footer__links {
     display: flex;
@@ -98,35 +110,7 @@ ul {
     margin-right: 60px;
 }
 
-.footer__socials {
-    display: flex;
-    align-items: center;
 
-}
-
-.footer__follow p {
-    display: flex;
-    align-items: center;
-    margin-right: 10px;
-    font-size: 14px;
-    color: #696969;
-}
-
-.social__logos {
-    justify-content: space-between;
-    align-items: center;
-}
-
-.social__logo svg {
-    height: 16px;
-    width: 20px;
-    color: #696969;
-
-}
-
-.social__logo svg:hover {
-    color: #3394d3;
-}
 
 @media (max-width:767px){
     .footer__container {

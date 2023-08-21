@@ -13,14 +13,29 @@ header {
         width: 100%;
         height: 50px;
         z-index: -1;
-        background: #ffb8d8;
+        background: var(--cottonCandyLightPink);
+        background: linear-gradient(90deg, rgba(255,184,216,0) 0%, var(--cottonCandyLightPink) 15%, var(--cottonCandyLightPink) 95%, rgba(255,184,216,0) 100%);
 }
 
 .logoSection {
-    background-color: #fff;
     display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
     max-width: 1200px;
     margin: 0 auto;
+}
+
+.socialMedia {
+    color: var(--cottonCandyPink);
+    display: flex;
+    align-items: flex-start;
+    padding-top:20px;
+}
+.socialMedia a {
+    color: var(--cottonCandyPink);
+}
+.socialMedia a:hover {
+    color: var(--cottonCandyLightPink);
 }
 .filterLogo {
     filter: invert(63%) sepia(87%) saturate(1716%) hue-rotate(295deg) brightness(101%) contrast(102%);
