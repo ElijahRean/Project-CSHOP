@@ -3,20 +3,21 @@
 .slider-wrapper {
     overflow: hidden;
     position: relative;
-    max-width: 64rem;
-    max-height: 15rem;
-    margin: 0 auto;
-    margin-top: 1rem;
-    border-radius: 40px 40px 40px 40px;
+    max-width: 100%;
+    max-height: 30rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+.image-container {
+    display: none;
 }
 
 .slider {
     display: flex;
-    aspect-ratio: 16 / 11;
     overflow: hidden;
     scroll-snap-type: x mandatory;
     scroll-behavior: smooth;
-    box-shadow: 0 1.5rem 3rem -0.75rem hsla(0, 0%, 0%, 0.25);
 }
 
 /* Slider IMG settings */
@@ -28,57 +29,36 @@
     object-fit: fill;
 }
 
-.slider-nav {
-    display: flex;
-    column-gap: 1rem;
-    position: absolute;
-    bottom: 1.25rem;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 1;
+.fade {
+    animation-name: fade;
+    animation-duration: 5s;
 }
 
-.slider-nav a {
-    width: 0.5rem;
-    height: 0.5rem;
-    border-radius: 50%;
-    background-color: #fff;
-    opacity: 0.75;
-    transition: opacity ease 250ms;
+@keyframes fade {
+    from {opacity: 0.9}
+    to {opacity: 1}
 }
 
-.slider-nav a:hover{
-    opacity: 1;
-}
 
 /* Media query for tablet */
 @media screen and (max-width: 1024px) {
     .slider {
-        aspect-ratio: 16 / 11; /* Adjust aspect ratio for tablets */
+        aspect-ratio: 16 / 11;
     }
 }
 
 /* Media query for mobile */
 @media screen and (max-width: 768px) {
     .slider {
-        aspect-ratio: 16 / 9; /* Adjust aspect ratio for tablets */
-        flex-direction: column; /* Stack images vertically */
-        height: auto; /* Allow the slider to grow based on content */
+        aspect-ratio: 16 / 9;
+        flex-direction: column;
+        height: auto;
     }
 
     .slider img {
-        max-width: 100%; /* Make images fill the slider width */
-        max-height: none; /* Remove max-height for images */
-        object-fit: cover; /* Crop images to cover entire slider */
-    }
-
-    .slider-nav {
-        bottom: 1rem; /* Adjust position of navigation for mobile */
-    }
-
-    .slider-nav a {
-        width: 0.25rem; /* Make navigation dots smaller for mobile */
-        height: 0.25rem;
+        max-width: 100%;
+        max-height: none;
+        object-fit: cover;
     }
 }
 
