@@ -38,6 +38,10 @@ Route::get('/about', function () {
     return view('about/about');
 });
 
+Route::get('/test', function () {
+    return view('test/products-test');
+});
+
 Auth::routes();
 
 Route::middleware(['auth', 'admin'])->group(function () {
