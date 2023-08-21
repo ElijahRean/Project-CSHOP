@@ -38,11 +38,13 @@ Route::get('/about', function () {
 
 Auth::routes();
 
-Route::middleware(['auth', AdminMiddleware::class])->group(function () {
+Route::middleware(['auth', 'admin'])->group(function () {
     Route::get('/adminpanel', function () {
-        return view('adminpanel');
+        return view('adminpanel/admin_page');
     });
 });
+
+// Route::post('/register', 'RegisterController@create')->name('register');
 
 Route::get('/home', [HomeController::class, 'index'])->name('home');
 

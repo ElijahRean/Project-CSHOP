@@ -1,0 +1,83 @@
+@import "baseline.css";
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 1200px;
+    padding: 2rem;
+    margin: 0 auto;
+}
+
+.admin-product-form-container {
+    max-width: 50rem;
+    margin: 0 auto;
+    padding: 2rem;
+    border-radius: .5rem;
+    background: var(--cottonCandyTeaRose);
+}
+
+.admin-product-form-container form h3 {
+    text-transform: uppercase;
+    color: var(--colorLightBlack);
+    margin-bottom: 1rem;
+    text-align: center;
+    outline: none;
+    text-decoration: none;
+}
+
+.admin-product-form-container form .box {
+    width: 100%;
+    border-radius: .5rem;
+    padding: 1.2rem 1.5rem;
+    font-size: 1.7rem;
+    outline: none;
+    background: var(--white);
+    text-transform: none;
+}
+
+.btn {
+    display: block;
+    width: 100%;
+    cursor: pointer;
+    border-radius: .5rem;
+    margin-top: 1rem;
+    font-size: 1.2rem;
+    padding: 0.5rem 1.5rem;
+    background: var(--cottonCandyDeepPink);
+}
+
+.btn:hover {
+    background: var(--mainColorLightPink);
+}
+
+.message {
+    display: block;
+    /* background: var(--colorLightBlack); */
+    padding: 1.5rem 1rem;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+.product-display {
+    margin: 2rem 0;
+    overflow-y: scroll;
+}
+
+.product-display .product-display-table {
+    width: 100%;
+}
+
+.product-display .product-display-table thead {
+    padding: 1rem;
+    font-size: 1.5rem;
+    background: var(--cottonCandyLightPink);
+
+}
+
+.product-display .product-display-table td {
+    padding: 1rem;
+    font-size: 1.2rem;
+}
