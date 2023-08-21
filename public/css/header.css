@@ -24,7 +24,10 @@ header {
     max-width: 1200px;
     margin: 0 auto;
 }
-
+.filterLogo {
+    filter: invert(63%) sepia(87%) saturate(1716%) hue-rotate(295deg) brightness(101%) contrast(102%);
+    height: 120px;
+}
 .socialMedia {
     color: var(--cottonCandyPink);
     display: flex;
@@ -37,9 +40,16 @@ header {
 .socialMedia a:hover {
     color: var(--cottonCandyLightPink);
 }
-.filterLogo {
-    filter: invert(63%) sepia(87%) saturate(1716%) hue-rotate(295deg) brightness(101%) contrast(102%);
-    height: 120px;
+@media (max-width:600px){
+    .filterLogo{
+    height: 70px;
+    }
+    .socialMedia {
+    font-size:12px;
+    }
+    .background {
+        display: none;
+    }
 }
 .top-nav {
     display: flex;
