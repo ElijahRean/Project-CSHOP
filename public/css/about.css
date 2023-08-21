@@ -48,9 +48,21 @@
     margin-right: 57px;
 }
 
+  @media (max-width: 715px){
+    .contact-form {
+        width: 500px;
+    }
 
+    .contact-form .about__image {
+        min-width: 480px;
+        border-radius: 10px;
+      }
 
-
-  @media (max-width: 650px){
+      .contact-form .about__title {
+        text-align: center;
+        font-size: 24px;
+        font-weight: 500;
+        color: #333;
+      }
 
 }
