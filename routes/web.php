@@ -38,9 +38,7 @@ Route::get('/about', function () {
     return view('about/about');
 });
 
-Route::get('/test', function () {
-    return view('test/products-test');
-});
+Route::get('/test', [\App\Http\Controllers\CandyController::class, 'index'])->name('test/products-test');
 
 Auth::routes();
 

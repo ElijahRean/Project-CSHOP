@@ -7,9 +7,10 @@ use App\Models\Candy;
 
 class CandyController extends Controller
 {
-    function index()
+    public function index()
     {
-        $data = Candy::all();
-        return view('candy',['candies' => $data]);
+        $products = Candy::all(); // Fetch all products from the database
+
+        return view('test.products-test', compact('products')); // Pass data to the view
     }
 }

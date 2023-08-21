@@ -1,20 +1,21 @@
 @extends('layouts.app')
 
 @include('partials.header');
-
 <div class="container">
-  <div class="row">
-    @foreach ($candies as $item)
-    <div class="col-xl-3 col-md-4 col-sm-6 mb-4">
-      <div class="card">
-      <img src="{{url('/images/1.webp')}}"  alt="Product 1" class="product-img">
-        <div class="card-body text-center">
-          <h4 class="card-title mb-2">Ginger Candy</h4>
-          <div class="card-text">$9.99 | <a href="#" class="list__item"><i class="fas fa-shopping-cart" ></i> Add to Cart</a></div>
+    <h1>Product List</h1>
+    <div class="row">
+        @foreach ($products as $product)
+        <div class="col-md-4">
+            <div class="card">
+                <img src="{{ url($product->image) }}" alt="{{ $product->name }}" class="product-img">
+                <div class="card-body">
+                    <h5 class="card-title">{{ $product->name }}</h5>
+                    <p class="card-text">{{ $product->description }}</p>
+                    <p class="card-text">${{ $product->price }}</p>
+                </div>
+            </div>
         </div>
-      </div>
-    @endforeach
-    </div>
+        @endforeach
     </div>
 </div>
 @include('partials.footer.footer');
