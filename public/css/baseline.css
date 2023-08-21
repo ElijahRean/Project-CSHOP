@@ -29,3 +29,13 @@ body {
     background-color: var(--white);
     background: radial-gradient(circle at top, var(--white) , var(--cottonCandyTeaRose));
 }
+
+.containerNice {
+    padding: 30px 40px;
+    background: linear-gradient(315deg, var(--white) 0%, var(--cottonCandyTeaRose) 100%);
+    border:2px solid var(--cottonCandyTeaRose);
+    border-radius: 12px;
+}
+
+.buttonNice {
+    
