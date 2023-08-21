@@ -6,7 +6,7 @@
 }
 
 .container {
-    max-width: 1200px;
+    max-width: 1300px;
     padding: 2rem;
     margin: 0 auto;
 }
@@ -16,7 +16,7 @@
     margin: 0 auto;
     padding: 2rem;
     border-radius: .5rem;
-    background: var(--cottonCandyTeaRose);
+    /* background: var(--cottonCandyTeaRose); */
 }
 
 .admin-product-form-container form h3 {
@@ -31,21 +31,23 @@
 .admin-product-form-container form .box {
     width: 100%;
     border-radius: .5rem;
-    padding: 1.2rem 1.5rem;
-    font-size: 1.7rem;
+    margin-top: 6px;
+    padding: 0.7rem .7rem;
+    font-size: 1.2rem;
     outline: none;
     background: var(--white);
     text-transform: none;
+    border: none;
 }
 
-.btn {
+.btn-product {
     display: block;
     width: 100%;
     cursor: pointer;
     border-radius: .5rem;
     margin-top: 1rem;
     font-size: 1.2rem;
-    padding: 0.5rem 1.5rem;
+    padding: 3px 6px;
     background: var(--cottonCandyDeepPink);
 }
 
@@ -78,6 +80,23 @@
 }
 
 .product-display .product-display-table td {
-    padding: 1rem;
+    padding: 0.8rem;
     font-size: 1.2rem;
+}
+
+.product-display .product-display-table .btn:first-child {
+    margin-top: 0;
+    background-color: green;
+}
+
+.product-display .product-display-table .btn:first-child:hover {
+    background-color: var(--cottonCandyLightPink);
+}
+
+.product-display .product-display-table .btn:last-child {
+background-color: red;
+}
+
+.product-display .product-display-table .btn:last-child:hover {
+    background-color: var(--cottonCandyLightPink);
 }

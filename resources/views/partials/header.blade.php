@@ -35,7 +35,20 @@
             <input type="text" placeholder="hunt for sugar..">
                 <div class="icons">
                     <i class="fas fa-shopping-cart" style="color: #fff;"></i>
-                    <i class="fas fa-user" style="color: #fff;"></i>
+
+
+                    @auth
+                        <form method="POST" action="{{ route('logout') }}">
+                            @csrf
+
+                            <a type="submit" title="Logout" class="btn btn-link">
+                                <i class="fas fa-user" style="color: #fff;"></i>
+                            </button>
+                        </form>
+                    @else
+                        <a href="{{ route('login') }}" title="Login"><i class="fas fa-user" style="color: #fff;"></i></a>
+                    @endauth
+
                 </div>
             </div>
     </nav>
