@@ -25,7 +25,7 @@
         top: 100%;
         left: 0;
         z-index: 100;
-        background-color:#ffb8d8;
+        background-color: var(--cottonCandyLightPink);
         padding: 8px 0;
         width: 100%;
     }
@@ -53,6 +53,22 @@
         width: calc(100% + 45px);
     }
 
+    .has-submenu .submenu {
+        background-color: var(--mainColorLightPink); /* probably needs better color selection */
+    }
+
+    .has-submenu .submenu li {
+        border-color: var(--cottonCandyLightPink); /* maybe needs color adjustment */
+    }
+
+    /* .menu > li:hover, .submenu > li:hover {
+        background-color: black;
+    } */
+
+    .submenu li a:hover {
+        background: none;
+    }
+
     .has-submenu:hover input[type="checkbox"]:not(:checked) + .submenu {
         display: none;
     }
@@ -61,12 +77,12 @@
         display: block;
     }
 
-    .submenu li a {
-       padding-left: 0;
+    .has-submenu .submenu li a {
+        padding-left: 0;
     }
 
     .top-nav > label {
-        background: #FF71B2;
+        background: var(--cottonCandyPink);
         display: block;
         padding: 0;
         text-align: right;
@@ -79,34 +95,38 @@
         align-items: center;
         cursor: pointer;
     }
-     
+
     .top-nav > ul i {
         padding: 0px 10px;
     }
 }
-  
+
 /* large styles */
 @media screen and (min-width: 1025px) {
     /* hide show navigation button and checkboxes */
     .top-nav > label,
     input[type="checkbox"] {
-      display: none;
+        display: none;
     }
 
     .top-nav a {
-      padding: 15px 20px;
+        padding: 15px 20px;
     }
 
     .top-nav > ul > li {
-      display: inline-block;
+        display: inline-block;
     }
 
     /* dropdown position and style*/
     .has-submenu > ul {
-      position: absolute;
-      top: 100%;
-      left: 3%;
-      background: #ffb8d8;
+        position: absolute;
+        top: 100%;
+        left: 3%;
+        background: var(-cottonCandyLightPink);
+    }
+
+    .has-submenu .submenu {
+        background-color: var(--cottonCandyLightPink);
     }
 
     .top-nav {
@@ -117,5 +137,8 @@
     .has-submenu > a {
         padding-right: 0;
     }
-} 
-  
+
+    .submenu li a:hover {
+        background-color: var(--mainColorLightPink);
+    }
+}
