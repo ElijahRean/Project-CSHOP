@@ -38,6 +38,12 @@ Route::get('/about', function () {
 
 Auth::routes();
 
+Route::middleware(['auth', AdminMiddleware::class])->group(function () {
+    Route::get('/adminpanel', function () {
+        return view('adminpanel');
+    });
+});
+
 Route::get('/home', [HomeController::class, 'index'])->name('home');
 
 Route::post('/contact', [ContactFormController::class, 'sendContactForm'])->name('contact.send');

@@ -16,7 +16,7 @@ class User extends Authenticatable
     use HasFactory;
     use HasProfilePhoto;
     use Notifiable;
-    use TwoFactorAuthenticatable;
+    // use TwoFactorAuthenticatable;
 
     /**
      * The attributes that are mass assignable.
@@ -28,6 +28,11 @@ class User extends Authenticatable
         'email',
         'password',
     ];
+
+    public function isAdmin()
+    {
+        return $this->isAdmin;
+    }
 
     /**
      * The attributes that should be hidden for serialization.
