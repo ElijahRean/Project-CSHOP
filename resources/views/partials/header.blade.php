@@ -1,31 +1,43 @@
-
-<section class="top-nav">
-        <div>
-        <img src="{{url('/images/cshoplogo.png')}}" alt="logotype" class="logo"><a href="home">Candy Shop Placeholder</a>
+<header>
+    <div class="background"></div>
+    <div class="logoSection">
+        <img src="{{url('/images/shopLogo.svg')}}" class="filterLogo"/>
+        <div class="socialMedia icons">
+        <a href="#"><i class="fa-brands fa-x-twitter fa-xl"></i></a>
+        <a href="#"><i class="fa-brands fa-instagram fa-xl"></i></a>
+        <a href="#"><i class="fa-brands fa-facebook fa-xl"></i></a>
+        <a href="#"><i class="fa-solid fa-circle-radiation fa-xl" id="theme-toggle"></i></a>
         </div>
-
-        <div class="right-size">
-            <ul class="horizontal-menu">
-                <li>
-                    <div class="searchInputWrapper">
-                        <input class="searchInput" type="text" placeholder='Search'>
-                        </input>
-                    </div>
+    </div>
+    <nav class="top-nav">
+        <label for="menu">
+            <i class="fa fa-bars"></i>
+        </label>
+        <input type="checkbox" id="menu">
+        <ul class="menu">
+                <li class="has-submenu">
+                    <a href="#">Catalogue</a>
+                    <label title="toggle menu" for="about">
+                        <i class="arrow fa fa-caret-down"></i>
+                    </label>
+                    <input type="checkbox" id="about">
+                    <ul class="submenu">
+                        <li><a href="#">Chocolates</a></li>
+                        <li><a href="#">Caramel candies</a></li>
+                        <li><a href="#">Weird candies</a></li>
+                    </ul>
                 </li>
-                <li><a href="#cart">Cart</a></li>
-                <li><i class="fa-solid fa-heart"></i></li>
-                <li><a href="#login">Login</a></li>
+                <li class=""><a href=#>Item 2</a></li>
+                <li class=""><a href=#>Item 3</a></li>
+
             </ul>
-            <input id="menu-toggle" type="checkbox" />
-            <label class='menu-button-container' for="menu-toggle">
-                <div class='menu-button'></div>
-            </label>
-            <ul class="menu">
-                <li><a href="#item1">Item 1</a></li>
-                <li><a href="#item2">Item 2</a></li>
-                <li><a href="#item3">Item 3</a></li>
-                <li><a href="#item4">Item 4</a></li>
-                <li><a href="#item5">Item 5</a></li>
-            </ul>
-        </div>
-    </section>
+            <div class="rightSide">
+            <input type="text" placeholder="hunt for sugar..">
+                <div class="icons">
+                    <i class="fas fa-shopping-cart" style="color: #fff;"></i>
+                    <i class="fas fa-user" style="color: #fff;"></i>
+                </div>
+            </div>
+    </nav>
+</header>
+

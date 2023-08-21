@@ -1,4 +1,5 @@
 
+
 /* Project colors */
 :root {
     --mainColorMediumPink: rgba(255,160,173);
@@ -7,9 +8,24 @@
     --mainColorLightBlue: rgba(211,233,255);
     --mainColorBlue: rgba(80,155,225);
     --colorLightBlack: #333;
+
+    --cottonCandyPink: #ff71b2;
+    --cottonCandyLightPink: #ffb8d8;
+    --cottonCandyBlue: #509be1;
+    --cottonCandyLightBlue: #d3e9ff;
+    --cottonCandyTeaRose: #ffd5d5;
+    --cottonCandySalmon: #ffa0ad;
+
+    --cottonCandyDeepPink: #d30069;
+
+    --white: #ffffff;
+    --grey: #333333;
+    --black: #000;
 }
 
 /* Main font */
 body {
     font-family: 'Lato', sans-serif;
+    background-color: var(--white);
+    background: radial-gradient(circle at top, var(--white) , var(--cottonCandyTeaRose));
 }
