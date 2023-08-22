@@ -2,7 +2,7 @@
 @extends('layouts.app')
 
 
-    @include('partials.header');
+    @include('partials.header')
 
     <script type="text/javascript" src="{{ asset('js/toggleTheme.js') }}"></script>
 
@@ -26,12 +26,12 @@
                                 <div class="quantityContainer" id="quantityDisplay">0</div>
                             <button class="quantity-btn plus-btn">+</button>
                         </div>
-                    <div class="btn-global">
-                        <button class="btn-cart">Add to Cart</button>
-                        <button class="btn-buy">Buy Now</button>
+                    <div class="gradient-buttons">
+                        <button class="btn btn-danger">Add to Cart</button>
+                        <button class="btn btn-danger">Buy Now</button>
                     </div>
                 </div>
             </div>
 
     </div>
-    @include('partials.footer.footer');
+    @include('partials.footer.footer')
