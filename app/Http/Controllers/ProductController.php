@@ -18,9 +18,11 @@ class ProductController extends Controller
     // Add a new product
     public function store(Request $request) {
 
+        dd($request->all());
+
         // Validate the data before insert to DB
         $validateData = $request->validate([
-            'name' =>'required',
+            'username' =>'required',
             'color' =>'required',
             'description' =>'required',
             'price' =>'required|numeric',
@@ -36,7 +38,7 @@ class ProductController extends Controller
         // Create a new product
         Product::create($validateData);
 
-        return redirect()->route('admin.products');
+        return redirect()->route('admin.products')->with('success', 'Product added successfully');;
     }
 
     // Remove a product

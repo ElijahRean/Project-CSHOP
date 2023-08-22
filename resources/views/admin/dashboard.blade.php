@@ -1,6 +1,5 @@
 @extends('layouts.admin')
 
-@section('dashboard')
 <nav class="navbar navbar-expand navbar-light">
 
     <ul class="navbar-nav">
@@ -8,7 +7,7 @@
             <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
         </li>
         <li class="nav-item d-none d-sm-inline-block">
-            <a href="../../index3.html" class="nav-link">Product list</a>
+            <a href="{{ route('admin.products.index') }}" class="nav-link">Product list</a>
         </li>
         <li class="nav-item d-none d-sm-inline-block">
             <a href="#" class="nav-link">User list</a>
@@ -45,5 +44,3 @@
 
     </ul>
 </nav>
-
-@endsection

@@ -60,6 +60,8 @@ Route::middleware(['auth', 'admin'])->prefix('admin')->name('admin.')->group(fun
     // Show a list of products
     Route::get('/products', [ProductController::class, 'index'])->name('products.index');
 
+    Route::get('/admin/products', [ProductController::class, 'index'])->name('admin.products.list');
+
     // Show form for creating a new product
     Route::get('/products/create', function () {
         return view('admin.products.add');
