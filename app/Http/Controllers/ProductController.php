@@ -12,7 +12,7 @@ class ProductController extends Controller
     // Fetch all products and display
     public function index() {
         $products = Product::all();
-        return view('products.index', compact('products'));
+        return view('admin.products.list', compact('products'));
     }
 
     // Add a new product
@@ -29,15 +29,20 @@ class ProductController extends Controller
             'image' =>'required|image',
         ]);
 
+        // Image upload
+        if ($request->hasFile('image')) {
+            $imagePath = $request->file('image')->store('product_images', 'public');
+            $validatedData['image'] = $imagePath;
+        }
+
         // Create a new product
         Product::create($validateData);
 
-        return redirect()->route('products.index');
+        return redirect()->route('admin.products.list');
     }
 
     // Remove a product
     public function destroy(Product $product) {
-        $product = Product::find($product->id);
         $product->delete();
 
         return redirect()->route('products.index');
