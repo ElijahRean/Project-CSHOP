@@ -67,9 +67,11 @@ Route::middleware(['auth', 'admin'])->prefix('admin')->name('admin.')->group(fun
     })->name('dashboard');
 
     // Show a list of products
-    Route::get('/products', function () {
-        return view('admin.products.list');
-    })->name('products');
+    // Route::get('/products', function () {
+    //     return view('admin.products.list');
+    // })->name('products');
+
+    Route::get('/products', [ProductController::class, 'index'])->name('products.index');
 
     // Show form for creating a new product
     // Route::get('/products/create', [ProductController::class, 'create'])->name('products.create');
@@ -82,6 +84,9 @@ Route::middleware(['auth', 'admin'])->prefix('admin')->name('admin.')->group(fun
 
     // Edit a product
     Route::get('/products/{product}/edit', [ProductController::class, 'edit'])->name('products.edit');
+
+    // Remove a product
+    Route::delete('/products/{product}', [ProductController::class, 'destroy'])->name('products.destroy');
 
 });
 

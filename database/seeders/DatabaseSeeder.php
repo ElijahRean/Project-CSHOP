@@ -30,5 +30,9 @@ class DatabaseSeeder extends Seeder
             'isAdmin' => true,
         ]);
 
+        $this->call(
+            CandiesSeeder::class
+        );
+
     }
 }

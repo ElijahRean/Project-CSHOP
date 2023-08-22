@@ -12,6 +12,7 @@ class ProductController extends Controller
     // Fetch all products and display
     public function index() {
         $products = Product::all();
+        // dd($products);
         return view('admin.products.list', compact('products'));
     }
 
@@ -21,8 +22,6 @@ class ProductController extends Controller
         // Validate the data before insert to DB
         $validateData = $request->validate([
             'name' =>'required',
-            'brand' =>'required',
-            'flavor' =>'required',
             'color' =>'required',
             'description' =>'required',
             'price' =>'required|numeric',
@@ -41,7 +40,7 @@ class ProductController extends Controller
         return redirect()->route('admin.products.list');
     }
 
-    // Remove a product
+    // Remove a product   SOFT DELETE!!!!!!!!
     public function destroy(Product $product) {
         $product->delete();
 
