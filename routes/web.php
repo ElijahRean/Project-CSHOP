@@ -38,6 +38,10 @@ Route::get('/about', function () {
     return view('about/about');
 });
 
+Route::get('/checkout', function () {
+    return view('checkout/checkout');
+});
+
 Route::get('/test', [\App\Http\Controllers\CandyController::class, 'index'])->name('test/products-test');
 
 Auth::routes();
