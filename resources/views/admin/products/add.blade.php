@@ -16,16 +16,6 @@
         </div>
 
         <div class="mt-4">
-            <x-label for="brand" :value="__('Brand')" />
-            <x-input id="brand" class="block mt-1 w-full" type="text" name="brand" :value="old('brand')" required />
-        </div>
-
-        <div class="mt-4">
-            <x-label for="flavour" :value="__('Flavour')" />
-            <x-input id="flavour" class="block mt-1 w-full" type="text" name="flavour" :value="old('flavour')" required />
-        </div>
-
-        <div class="mt-4">
             <x-label for="color" :value="__('color')" />
             <x-input id="color" class="block mt-1 w-full" type="text" name="color" :value="old('color')" required />
         </div>
