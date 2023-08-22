@@ -10,6 +10,13 @@
                     <div class="inline-block min-w-full py-2 sm:px-6 lg:px-8">
                         <div class="overflow-hidden">
                             <table class="min-w-full text-left text-sm font-light">
+
+                                {{-- Delete successfully! --}}
+                                @if (session('success'))
+                                    <div class="alert alert-success">
+                                        {{ session('success') }}
+                                    </div>
+                                @endif
                                 <thead>
                                     <tr>
                                         <th>ID</th>
@@ -61,18 +68,3 @@
         </div>
     </div>
 @endsection
-
-
-{{-- <thead class="border-b font-medium dark:border-neutral-500">
-    <tr>
-        <th scope="col" class="px-6 py-4">#</th>
-        <th scope="col" class="px-6 py-4">Name</th>
-        <th scope="col" class="px-6 py-4">Email</th>
-        <th scope="col" class="px-6 py-4">Role</th>
-        <th scope="col" class="px-6 py-4 text-right">Actions</th>
-    </tr>
-    <td colspan="2">
-        <a href="" class="add-btn">Edit</a>
-        <a href="" class="add-btn">Delete</a>
-    </td>
-</thead> --}}

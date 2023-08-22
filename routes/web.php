@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\UserController;
-use App\Http\Controllers\UserController2;
+
 use App\Http\Controllers\CandiesController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\RegisterController;
@@ -67,6 +67,8 @@ Route::middleware(['auth', 'admin'])->prefix('admin')->name('admin.')->group(fun
 
     // Show a list of products
     Route::get('/products', [ProductController::class, 'index'])->name('products.index');
+
+    Route::get('/admin/products', [ProductController::class, 'index'])->name('admin.products.list');
 
     // Show form for creating a new product
     Route::get('/products/create', function () {
