@@ -48,6 +48,7 @@ Route::get('/checkout', function () {
 });
 
 Route::get('/', [\App\Http\Controllers\CandyController::class, 'frontPage'])->name('products');
+Route::get('/product/{id}', [CandyController::class, 'separateProduct'])->name('product.show');
 
 Auth::routes();
 
