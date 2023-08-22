@@ -40,6 +40,20 @@ header {
 .socialMedia a:hover {
     color: var(--cottonCandyLightPink);
 }
+.icons {
+    display: flex;
+    align-items: center;
+    margin-right:10px;
+}
+
+.icons i {
+    margin-left: 10px;
+}
+
+.icons button{
+    margin-left: 10px;
+}
+
 @media (max-width:600px){
     .filterLogo{
     height: 70px;
@@ -72,22 +86,24 @@ header {
 }
 
 .rightSide input[type="text"] {
-    padding: 5px 10px;
+    padding: 3px 10px;
     border: none;
     border-radius: 15px;
 }
 
-.icons {
+.buttons {
     display: flex;
     align-items: center;
-    margin-right:10px;
+    padding-top:20px
 }
 
-.icons i {
-    margin-left: 10px;
+.cart-login{
+    color: var(--white);
 }
 
-/* ~~~~~~~~~~~~~~~ menu that sucks ~~~~~~~~~~~~~~~~~~ */
+.cart-login:hover{
+
+}
 
 .menu {
     font-family: 'Fredoka', sans-serif;
