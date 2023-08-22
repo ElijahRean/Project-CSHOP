@@ -55,28 +55,31 @@ Route::middleware(['auth', 'admin'])->group(function () {
 
 //////////////// Products
 
-Route::middleware(['auth', 'admin'])->prefix('admin')->group(function () {
-    Route::get('/', [ProductController::class, 'index'])->name('products');
+Route::middleware(['auth', 'admin'])->prefix('admin')->name('admin.')->group(function () {
 
-    Route::name('admin')->group(function () {
-        Route::get('/', function () {
-            return view('admin.dashboard');
-        })->name('dashboard');
+    // Dashboard
+    Route::get('/', function () {
+        return view('admin.dashboard');
+    })->name('dashboard');
 
-        // Show a list of products
-        Route::get('/products', [ProductController::class, 'index'])->name('products');
+    // Show a list of products
+    Route::get('/products', function () {
+        return view('admin.products.list');
+    })->name('products');
 
-        // Show form for creating a new product
-        Route::get('/products/create', [ProductController::class, 'create'])->name('products.create');
+    // Show form for creating a new product
+    // Route::get('/products/create', [ProductController::class, 'create'])->name('products.create');
+    Route::get('/products/create', function () {
+        return view('admin.products.add');
+    })->name('products.create');
 
-        // Store a new product
-        Route::post('/products', [ProductController::class,'store'])->name('products.store');
+    // Store a new product
+    Route::post('/products', [ProductController::class, 'store'])->name('products.store');
 
-        // Edit a product
-        Route::get('/products/{product}/edit', [ProductController::class, 'edit'])->name('products.edit');
-        });
+    // Edit a product
+    Route::get('/products/{product}/edit', [ProductController::class, 'edit'])->name('products.edit');
 
-    });
+});
 
 
 
