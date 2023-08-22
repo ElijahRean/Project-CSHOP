@@ -1,4 +1,5 @@
-    @extends('layouts.app')
+
+@extends('layouts.app')
 
 
     @include('partials.header');
@@ -8,25 +9,24 @@
     <div class="container">
             <div class="product-content">
                 <div class="product-images">
-                    <img class="main-image" src="{{url('/images/3.webp')}}" alt="Product Image">
+                    <img class="main-image" src="{{ url($product->image) }}" alt="Product Image">
                         <div class="thumbnail-images">
-                            <img class="thumbnail" src="{{url('/images/3.webp')}}" alt="Thumbnail 1" onclick="changeMainImage(this)">
-                            <img class="thumbnail" src="{{url('/images/4.webp')}}" alt="Thumbnail 2" onclick="changeMainImage(this)">
-                            <img class="thumbnail" src="{{url('/images/4.webp')}}" alt="Thumbnail 3" onclick="changeMainImage(this)">
+                            <img class="thumbnail" src="{{ url($product->image) }}" alt="Thumbnail 1" onclick="changeMainImage(this)">
+                            <img class="thumbnail" src="{{ url($product->image) }}" alt="Thumbnail 2" onclick="changeMainImage(this)">
+                            <img class="thumbnail" src="{{ url($product->image) }}" alt="Thumbnail 3" onclick="changeMainImage(this)">
                         </div>
                     </div>
                 <div class="product-info">
-                <h1 class="product-heading">Product Name</h1>
+                <h1 class="product-heading">{{ $product->name }}</h1>
                     <div class="description">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam tristique neque et purus ullamcorper, et dignissim ligula bibendum.
-                    Ut ac leo vitae dolor facilisis consectetur. Suspendisse consectetur purus nec augue malesuada, ut varius dui faucibus.</p>
+                    <p>{{ $product->description }}</p>
                     </div>
                     <div class="parameters">
-                        <p class="parameter"><strong>Brand:</strong> XYZ Brand</p>
-                        <p class="parameter"><strong>Flavour:</strong> Vanilla</p>
-                        <p class="parameter"><strong>Type:</strong> Product Type</p>
-                        <p class="parameter"><strong>Color:</strong> Blue</p>
-                        <p class="parameter"><strong>Price:</strong> <span class="price">$99.99</span></p>
+                        <p class="parameter"><strong>Brand:</strong> {{ $product->brand }}</p>
+                        <p class="parameter"><strong>Flavour:</strong> {{ $product->flavour }}</p>
+                        <p class="parameter"><strong>Type:</strong> {{ $product->type }}</p>
+                        <p class="parameter"><strong>Color:</strong> {{ $product->color }}</p>
+                        <p class="parameter"><strong>Price:</strong> <span class="price">{{ $product->price }}</span></p>
                     </div>
                     <div class="rating">
                         <input type="radio" name="rating" value="5" id="5"><label for="5">☆</label>
