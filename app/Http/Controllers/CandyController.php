@@ -19,13 +19,10 @@ class CandyController extends Controller
 
         return view('products.productListPage', compact('products')); // Pass data to the view
     }
+    public function separateProduct($id)
+    {
+    $product = Candy::find($id);
 
-//     public function show(Product $user): RedirectResponse //product id ,find by model
-//     {
-//         $user->delete(); //product model
-
-//         return redirect()->route('admin.user.index')
-//             ->with('success','Company has been deleted successfully');
-//     }
-//
+    return view('products.productDetailsPage', compact('product'));
+    }
 }
