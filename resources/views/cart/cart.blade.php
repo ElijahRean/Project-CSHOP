@@ -1,7 +1,6 @@
 @extends('layouts.app')
 
     @include('partials.header');
-    @include('sidebar.sidebar');
 
     <div class="cart-container">
         <div class="cart-header">
