@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\UserController;
-use App\Http\Controllers\UserController2;
+
 use App\Http\Controllers\CandiesController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\RegisterController;
