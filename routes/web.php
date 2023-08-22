@@ -10,6 +10,10 @@ use App\Http\Controllers\ProductController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\ContactFormController;
 
+use App\Http\Controllers\UserController2;
+use App\Http\Controllers\CandyController;
+
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -21,9 +25,9 @@ use App\Http\Controllers\ContactFormController;
 |
 */
 
-Route::get('/', function () {
-    return view('home');
-});
+// Route::get('/', function () {
+//     return view('home');
+// });
 
 
 // Route::get('/product/{productName}', [ProductController::class, 'show']);
@@ -39,7 +43,11 @@ Route::get('/about', function () {
     return view('about/about');
 });
 
-Route::get('/test', [\App\Http\Controllers\CandyController::class, 'index'])->name('test/products-test');
+Route::get('/checkout', function () {
+    return view('checkout/checkout');
+});
+
+Route::get('/', [\App\Http\Controllers\CandyController::class, 'frontPage'])->name('products');
 
 Auth::routes();
 
@@ -48,6 +56,37 @@ Route::middleware(['auth', 'admin'])->group(function () {
         return view('adminpanel/admin_page');
     });
 });
+
+//////////////// Products
+
+Route::middleware(['auth', 'admin'])->prefix('admin')->name('admin.')->group(function () {
+
+    // Dashboard
+    Route::get('/', function () {
+        return view('admin.dashboard');
+    })->name('dashboard');
+
+    // Show a list of products
+    Route::get('/products', function () {
+        return view('admin.products.list');
+    })->name('products');
+
+    // Show form for creating a new product
+    // Route::get('/products/create', [ProductController::class, 'create'])->name('products.create');
+    Route::get('/products/create', function () {
+        return view('admin.products.add');
+    })->name('products.create');
+
+    // Store a new product
+    Route::post('/products', [ProductController::class, 'store'])->name('products.store');
+
+    // Edit a product
+    Route::get('/products/{product}/edit', [ProductController::class, 'edit'])->name('products.edit');
+
+});
+
+
+
 
 // Route::post('/register', 'RegisterController@create')->name('register');
 
