@@ -78,6 +78,7 @@ header {
     border-top-left-radius: 25px;
     border-bottom-left-radius: 25px;
     height: 50px;
+    text-shadow: 1px 1px 0 hsl(335, 79%, 46%);
 }
 
 .rightSide {
@@ -130,7 +131,7 @@ header {
 .submenu {
     display: none;
     position: absolute;
-    background-color: #AE66D7;
+    background-color: #FF71B2;
     list-style: none;
     z-index:6;
     text-align:left;
