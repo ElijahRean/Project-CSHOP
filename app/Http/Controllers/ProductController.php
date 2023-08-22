@@ -12,7 +12,6 @@ class ProductController extends Controller
     // Fetch all products and display
     public function index() {
         $products = Product::all();
-        // dd($products);
         return view('admin.products.list', compact('products'));
     }
 
@@ -37,37 +36,15 @@ class ProductController extends Controller
         // Create a new product
         Product::create($validateData);
 
-        return redirect()->route('admin.products.list');
+        return redirect()->route('admin.products');
     }
 
-    // Remove a product   SOFT DELETE!!!!!!!!
+    // Remove a product
     public function destroy(Product $product) {
         $product->delete();
 
-        return redirect()->route('products.index');
+        return back()->with('success', 'Product deleted successfully');
     }
 }
 
-
-// public function show($productName) {
-//     $products = [
-//         [
-//             'name' => 'Product 1',
-//             'price' => 19.99,
-//             'description' => 'This is the description for Product 1.',
-//         ],
-//         [
-//             'name' => 'Product 2',
-//             'price' => 29.99,
-//             'description' => 'This is the description for Product 2.',
-//         ],
-//         [
-//             'name' => 'Product 3',
-//             'price' => 39.99,
-//             'description' => 'This is the description for Product 3.',
-//         ],];
-//         $product = $products[$productName] ?? null;
-
-//         return view('products.show', ['product' => $product]);
-// }
 
