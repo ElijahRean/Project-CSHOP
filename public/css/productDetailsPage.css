@@ -10,7 +10,8 @@
 .product-heading {
     text-align: center;
     font-size: 28px;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
+    font-weight: bold;
 }
 
 .product-content {
@@ -40,25 +41,6 @@
 
 }
 
-.thumbnail-images {
-    display:flex;
-    gap: 10px;
-    margin-top: 10px;
-
-}
-
-.thumbnail {
-    object-fit: cover;
-    width: 100px;
-    height: 100px;
-    border: 1px solid #ccc;
-    border-radius: 20%;
-    cursor: pointer;
-
-
-}
-
-
 .product-info {
     flex: 1;
     padding-left: 20px;
@@ -76,13 +58,28 @@
 .btn-global {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-evenly;
     padding-top: 1rem;
+    outline: none;
+    text-decoration: none;
 }
 
+.btn-cart, .btn-buy {
+    border: none;
+    border-radius: 4px;
+    background-color: var(--cottonCandyDeepPink);
+    color: white;
+    text-transform: uppercase;
+    padding: 10px 60px;
+    font-weight: 500;
+    letter-spacing: 2px;
 
 
+}
 
+.btn-cart:hover, .btn-buy:hover {
+    background-color: var(--cottonCandyDeepPink);
+}
 /*
 .btn-buy, .btn-cart {
     background: transparent;
@@ -142,48 +139,12 @@
     line-height: 1.5;
 }
 
-.rating {
-    display: flex;
-    flex-direction: row;
-    justify-content: left;
-    }
-
-    .rating > input{
-    display:none;
-    }
-
-    .rating > label {
-    position: relative;
-    width: 30px;
-    font-size: 30px;
-    color: var(--mainColorBlue);
-    cursor: pointer;
-    }
-
-    .rating > label::before{
-    content: '\2605';
-    position: absolute;
-    opacity: 0;
-    }
-
-    .rating > label:hover:before,
-    .rating > label:hover ~ label:before {
-    opacity: 1 !important;
-    }
-
-    .rating > input:checked ~ label:before{
-    opacity:1;
-    }
-
-    .rating:hover > input:checked ~ label:before{
-    opacity: 0.4;
-    }
-
 #quantityContainer {
     display:flex;
     align-items: center;
     gap:10px;
-    padding-left: 2rem;
+    margin-right: 20px;
+
 
 }
 
@@ -197,6 +158,9 @@
     justify-content: center;
     align-items: center;
     cursor: pointer;
+    color: var(--mainColorBlue);
+    outline:none;
+    text-decoration: none;
 
 }
 
@@ -204,10 +168,16 @@
     border: none;
     background-color: #3394d3;
 
+
 }
 
 #quantityDisplay {
     font-size: 24px;
     font-weight: bold;
+    color: var(--mainColorBlue);
 }
 
+
+.footer {
+    margin-top: 20px;
+}

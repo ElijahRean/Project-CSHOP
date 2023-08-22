@@ -56,7 +56,5 @@ Route::get('/home', [HomeController::class, 'index'])->name('home');
 Route::post('/contact', [ContactFormController::class, 'sendContactForm'])->name('contact.send');
 
 
-Route::get('/candies', [CandiesController::class, 'index']);
-Route::get('/candies/{id}', [CandiesController::class, 'show'])->name('products.show');
-
-Route::get('/products/{id}', [CandiesController::class, 'show'])->name('products.show');
+Route::get('/candies', [CandiesController::class, 'index'])->name('candies.index');
+Route::get('/candies/{id}', [CandiesController::class, 'show'])->name('candies.show');
