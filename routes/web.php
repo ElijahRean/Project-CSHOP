@@ -44,6 +44,34 @@ Route::middleware(['auth', 'admin'])->group(function () {
     });
 });
 
+//////////////// Products
+
+Route::middleware(['auth', 'admin'])->prefix('admin')->group(function () {
+    Route::get('/', [ProductController::class, 'index'])->name('products');
+
+    Route::name('admin')->group(function () {
+        Route::get('/', function () {
+            return view('admin.dashboard');
+        })->name('dashboard');
+
+        // Show a list of products
+        Route::get('/products', [ProductController::class, 'index'])->name('products');
+
+        // Show form for creating a new product
+        Route::get('/products/create', [ProductController::class, 'create'])->name('products.create');
+
+        // Store a new product
+        Route::post('/products', [ProductController::class,'store'])->name('products.store');
+
+        // Edit a product
+        Route::get('/products/{product}/edit', [ProductController::class, 'edit'])->name('products.edit');
+        });
+
+    });
+
+
+
+
 // Route::post('/register', 'RegisterController@create')->name('register');
 
 Route::get('/home', [HomeController::class, 'index'])->name('home');
