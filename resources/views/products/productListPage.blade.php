@@ -9,7 +9,7 @@
             <div class="card">
                 <img src="{{ url($product->image) }}" alt="{{ $product->name }}" class="product-img">
                 <div class="card-body text-center">
-                    <h4 class="card-title mb-2">{{ $product->name }}</h4>
+                    <a href="{{ route('product.show', $product->id) }}"><h4 class="card-title mb-2">{{ $product->name }}</h4></a>
                     <div class="card-text">${{ $product->price }}| <a href="#" class="list__item"><i class="fas fa-shopping-cart" ></i> Add to Cart</a></div>
                 </div>
             </div>
