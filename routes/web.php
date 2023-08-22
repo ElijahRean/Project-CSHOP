@@ -8,6 +8,7 @@ use App\Http\Controllers\ProductController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\ContactFormController;
 use App\Http\Controllers\UserController2;
+use App\Http\Controllers\CandyController;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,9 +21,9 @@ use App\Http\Controllers\UserController2;
 |
 */
 
-Route::get('/', function () {
-    return view('home');
-});
+// Route::get('/', function () {
+//     return view('home');
+// });
 
 
 // Route::get('/product/{productName}', [ProductController::class, 'show']);
@@ -42,7 +43,7 @@ Route::get('/checkout', function () {
     return view('checkout/checkout');
 });
 
-Route::get('/test', [\App\Http\Controllers\CandyController::class, 'index'])->name('test/products-test');
+Route::get('/', [\App\Http\Controllers\CandyController::class, 'frontPage'])->name('products');
 
 Auth::routes();
 
