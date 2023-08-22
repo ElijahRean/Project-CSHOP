@@ -9,8 +9,6 @@ use App\Http\Controllers\CandiesController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\ContactFormController;
-
-use App\Http\Controllers\UserController2;
 use App\Http\Controllers\CandyController;
 
 
