@@ -27,13 +27,18 @@
                         <li><a href="#">Weird candies</a></li>
                     </ul>
                 </li>
-                <li class=""><a href=#>Item 2</a></li>
-                <li class=""><a href=#>Item 3</a></li>
+                <li class=""><a href=#>About us</a></li>
 
             </ul>
             <div class="rightSide">
-                <input type="text" placeholder="hunt for sugar..">
-                <div class="buttons">
+            <div class="buttons">
+                <form action="#" method="GET">
+                    <div class="input-group candy-search">
+                    <input type="text" class="form-control" placeholder="Search for..">
+                    <div class="input-group-append"><button class="btn btn-light" type="button"> <i class="fa fa-search"></i></button></div>
+                    </div>
+                </form>
+                            
                 <form method="/" action="#">
                 <button type="submit" title="Cart" class="btn btn-link cart-login"><i class="fa-solid fa-cart-shopping fa-lg"></i></button>
                 </form>
