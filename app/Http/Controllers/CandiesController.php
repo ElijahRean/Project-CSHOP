@@ -16,7 +16,7 @@ class CandiesController extends Controller
     public function show($id)
     {
         $product = Candy::findOrFail($id); // Find the candy with the given ID
-        return view('productDetailsPage', compact('product'));
+        return view('products.productDetailsPage', compact('product'));
     }
 
 }
