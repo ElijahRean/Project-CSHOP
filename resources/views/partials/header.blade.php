@@ -33,20 +33,19 @@
             </ul>
             <div class="rightSide">
             <input type="text" placeholder="hunt for sugar..">
-                <div class="icons">
-                    <i class="fas fa-shopping-cart" style="color: #fff;"></i>
-
+                <div class="rightside-buttons">
+                        <button type="submit" title="Cart" class="btn btn-danger">Cart</button>
 
                     @auth
                         <form method="POST" action="{{ route('logout') }}">
                             @csrf
 
-                            <button type="submit" title="Logout" class="btn btn-link">
-                                <i class="fas fa-user" style="color: #fff;"></i>
-                            </button>
+                        <button type="submit" title="Logout" class="btn btn-danger">Logout</button>
                         </form>
                     @else
-                        <a href="{{ route('login') }}" title="Login"><i class="fas fa-user" style="color: #fff;"></i></a>
+                        <form method="POST" action="{{ route('login') }}">
+                        <button type="submit" title="Login" class="btn btn-danger">Login</button>
+                        </form>
                     @endauth
 
                 </div>
