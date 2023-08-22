@@ -38,7 +38,7 @@ header {
     color: var(--cottonCandyPink);
 }
 .socialMedia a:hover {
-    color: var(--cottonCandyLightPink);
+    color: var(--cottonCandyDeepPink);
 }
 .icons {
     display: flex;
@@ -47,10 +47,6 @@ header {
 }
 
 .icons i {
-    margin-left: 10px;
-}
-
-.icons button{
     margin-left: 10px;
 }
 
@@ -101,9 +97,19 @@ header {
 .cart-login{
     color: var(--white);
 }
-
 .cart-login:hover{
+    color: var(--black);
+}
 
+.fa-search {
+    color: var(--cottonCandyPink);
+}
+.fa-search a:hover {
+    color: var(--cottonCandyDeepPink);
+}
+
+.candy-search{
+    width: 200px;
 }
 
 .menu {

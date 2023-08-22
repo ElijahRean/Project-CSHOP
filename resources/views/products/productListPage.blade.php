@@ -20,4 +20,6 @@
         @endforeach
     </div>
 </div>
+@include('partials.contactform.contactform')
+
 @include('partials.footer.footer');
