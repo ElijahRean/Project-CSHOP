@@ -48,6 +48,4 @@ body {
 a {
     color: var(--brightPink);
   }
-a:hover {
-    color: var(--cottonCandyDeepPink);
-  }
+
