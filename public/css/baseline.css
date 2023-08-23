@@ -29,11 +29,65 @@
 }
 
 /* Main font */
+
+
+/* Project colors */
+:root {
+    --mainColorMediumPink: rgba(255,160,173);
+    --mainColorLightPink: rgba(255,213,213);
+    --mainColorPink: rgba(255,113,178);
+    --mainColorLightBlue: rgba(211,233,255);
+    --mainColorBlue: rgba(80,155,225);
+    --colorLightBlack: #333;
+
+    --brightPink:#FF456A;
+    --logoPink: #FF71B2;
+    --submenuPink: #E05091;
+
+    --cottonCandyPink: #ff71b2;
+    --cottonCandyLightPink: #ffb8d8;
+    --cottonCandyBlue: #509be1;
+    --cottonCandyLightBlue: #d3e9ff;
+    --cottonCandyTeaRose: #ffd5d5;
+    --cottonCandySalmon: #ffa0ad;
+
+    --cottonCandyDeepPink: #d30069;
+    --cottonCandyDeepPink:  red;
+
+    --white: #ffffff;
+    --grey: #333333;
+    --black: #000;
+}
+
+/* Main font */
 body {
     font-family: 'Lato', sans-serif;
     background-color: var(--white);
     background: radial-gradient(circle at top, var(--white) , var(--cottonCandyTeaRose));
+    display: flex;
+    flex-direction: column;
 }
+
+/* Footer stick to the bottom */
+.footer-background{
+    margin-top: auto;
+}
+
+.containerNice {
+    padding: 30px 40px;
+    background: linear-gradient(315deg, var(--white) 0%, var(--cottonCandyTeaRose) 100%);
+    border:2px solid var(--cottonCandyTeaRose);
+    border-radius: 12px;
+}
+
+.buttonNice {
+}
+
+a {
+    color: var(--brightPink);
+  }
+
+
 
 .containerNice {
     padding: 30px 40px;
