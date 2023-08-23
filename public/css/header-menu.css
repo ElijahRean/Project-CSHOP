@@ -25,7 +25,7 @@
         top: 100%;
         left: 0;
         z-index: 100;
-        background-color: var(--logoPink);
+        background-color: var(--cottonCandySalmon);
         padding: 8px 0;
         width: 100%;
     }
@@ -122,11 +122,11 @@
         position: absolute;
         top: 100%;
         left: 3%;
-        background: var(-logoPink);
+        background: var(--submenuPink);
     }
 
     .has-submenu .submenu {
-        background-color: var(--logoPink);
+        background-color: var(--submenuPink);
     }
 
     .top-nav {
@@ -139,6 +139,6 @@
     }
 
     .submenu li a:hover {
-        background-color: var(--submenuPink);
+        background-color: var(--cottonCandyDeepPink);
     }
 }

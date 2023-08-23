@@ -11,7 +11,9 @@
 
     --brightPink:#FF456A;
     --logoPink: #FF71B2;
-    --submenuPink: #E05091;
+    --submenuPink: #dd4f8f;
+    --menuPink: #ec579a;
+
 
     --cottonCandyPink: #ff71b2;
     --cottonCandyLightPink: #ffb8d8;
@@ -21,7 +23,6 @@
     --cottonCandySalmon: #ffa0ad;
 
     --cottonCandyDeepPink: #d30069;
-    --cottonCandyDeepPink:  red;
 
     --white: #ffffff;
     --grey: #333333;
@@ -49,10 +50,9 @@
     --cottonCandyBlue: #509be1;
     --cottonCandyLightBlue: #d3e9ff;
     --cottonCandyTeaRose: #ffd5d5;
-    --cottonCandySalmon: #ffa0ad;
+    --cottonCandySalmon: #e9629e;
 
     --cottonCandyDeepPink: #d30069;
-    --cottonCandyDeepPink:  red;
 
     --white: #ffffff;
     --grey: #333333;
@@ -68,6 +68,15 @@ body {
     flex-direction: column;
 }
 
+h1, h2, h3, h4, h5, h6 {
+    font-weight:600;
+    background: #631541;
+    background: linear-gradient(to right, #631541 0%, #CF066B 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+
 /* Footer stick to the bottom */
 .footer-background{
     margin-top: auto;
@@ -80,7 +89,39 @@ body {
     border-radius: 12px;
 }
 
-.buttonNice {
+.button-nice {
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+    padding: 12px 24px;
+    border-radius: 8px;
+    background: #ff4086;
+    border: 1px solid #bf2752;
+    background: linear-gradient(to bottom, #ff4086, #bf2752);
+    box-shadow: #ff3b7c 0px 0px 11px 0px;
+    text-shadow: #781934 1px 1px 1px;
+    font: normal normal bold 20px arial;
+    color: #ffffff;
+    text-decoration: none;
+}
+.right {
+    text-align: right;
+}
+
+.button-nice:focus {
+    border: 1px solid #ef3167;
+    background: #ff4da1;
+    background: linear-gradient(to bottom, #ff4da1, #e52f62);
+}
+
+
+.button-blank {
+    background-color: transparent;
+    border-radius: 1000px;
+    border: 0;
+    padding:       7px;
+    display:       inline-block;
+    text-align:    center;
 }
 
 a {
@@ -88,18 +129,15 @@ a {
   }
 
 
-
-.containerNice {
-    padding: 30px 40px;
-    background: linear-gradient(315deg, var(--white) 0%, var(--cottonCandyTeaRose) 100%);
-    border:2px solid var(--cottonCandyTeaRose);
-    border-radius: 12px;
-}
-
-.buttonNice {
+.button-blank {
+    background-color: transparent;
+    border-radius: 1000px;
+    border: 0;
+    padding:       7px;
+    display:       inline-block;
+    text-align:    center;
 }
 
 a {
     color: var(--brightPink);
   }
-
