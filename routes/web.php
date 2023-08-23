@@ -81,6 +81,9 @@ Route::middleware(['auth', 'admin'])->prefix('admin')->name('admin.')->group(fun
     // Edit a product
     Route::get('/products/{product}/edit', [ProductController::class, 'edit'])->name('products.edit');
 
+    // Update a product
+    Route::put('/products/{products}', [ProductController::class, 'update'])->name('products.update');
+
     // Remove a product
     Route::delete('/products/{product}', [ProductController::class, 'destroy'])->name('products.destroy');
 

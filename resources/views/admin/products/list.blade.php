@@ -8,8 +8,8 @@
             <div class="flex flex-col">
                 <div class="overflow-x-auto sm:-mx-6 lg:-mx-8">
                     <div class="inline-block min-w-full py-2 sm:px-6 lg:px-8">
-                        <div class="overflow-hidden">
-                            <table class="ml-3 mr-3 table table-bordered ">
+                        <div class="overflow-hidden ">
+                            <table class="ml-3 mr-3 table table-bordered">
 
                                 {{-- Delete successfully! --}}
                                 @if (session('success'))
@@ -30,7 +30,7 @@
                                 <tbody>
                                     @foreach ($products as $product)
                                         <tr class="">
-                                            <td class="whitespace-nowrap px-2 py-2">{{ $product->id }}</td>
+                                            <td class="whitespace-nowrap px-2 py-2 ">{{ $product->id }}</td>
                                             <td class="whitespace-nowrap px-2 py-2">{{ $product->name }}</td>
                                             <td class="whitespace-nowrap px-2 py-2">{{ $product->color }}</td>
                                             <td class="whitespace-wrap ppx-2 py-2">{{ $product->description }}</td>
