@@ -21,7 +21,7 @@ class ProductController extends Controller
         // dd($request->all());
 
         $data = $request->validate([
-            'username' =>'required|max:255',
+            'name' =>'required|max:255',
             'color' =>'required|max:255',
             'description' =>'required|max:1055',
             'price' =>'required|numeric',

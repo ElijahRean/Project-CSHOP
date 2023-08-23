@@ -16,8 +16,8 @@
     @endif
 
     <div class="form-group">
-        <label for="username">Name</label>
-        <input id="username" class="form-control" type="text" name="username" value="{{ old('name') }}" required>
+        <label for="name">Name</label>
+        <input id="name" class="form-control" type="text" name="name" value="{{ old('name') }}" required>
     </div>
 
     <div class="form-group mt-4">
