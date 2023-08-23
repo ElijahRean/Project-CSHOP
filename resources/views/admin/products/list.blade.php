@@ -59,7 +59,7 @@
                                 </tbody>
                             </table>
                             <div class="">
-                                <a class="btn btn-success btn-lg"
+                                <a class="btn btn-success btn-lg btn-block"
                                     href="{{ route('admin.products.create') }}">Add product</a>
                             </div>
 

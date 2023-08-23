@@ -96,7 +96,7 @@ Route::middleware(['auth', 'admin'])->group(function () {
         return view('admin.users.add');
     })->name('users.create');
 
-    // Route::post('/users', [ProductController::class, 'store'])->name('users.store');
+    Route::post('/users', [UserController::class, 'store'])->name('users.store');
 
     Route::delete('users/{user}', [UserController::class, 'destroy'])->name('users.destroy');
 

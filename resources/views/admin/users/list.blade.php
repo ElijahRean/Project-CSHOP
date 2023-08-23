@@ -24,17 +24,17 @@
                                 <tbody>
                                     @foreach ($users as $user)
                                         <tr class="">
-                                            <td class="whitespace-nowrap px-2 py-2 ">{{ $user->id }}</td>
-                                            <td class="whitespace-nowrap px-2 py-2">{{ $user->name }}</td>
-                                            <td class="whitespace-nowrap px-2 py-2">{{ $user->email }}</td>
+                                            <td class="text-align">{{ $user->id }}</td>
+                                            <td class="">{{ $user->name }}</td>
+                                            <td class="">{{ $user->email }}</td>
 
 
-                                            <td class="px-2 py-2">
-                                                <form method="post"
+                                            <td class="">
+                                                <form method="POST"
                                                     action="{{ route('admin.users.destroy', $user) }}">
                                                     @csrf
                                                     @method('DELETE')
-                                                    <button type="submit" class="btn btn-danger">
+                                                    <button type="submit" class="btn btn-danger ">
                                                         Delete
                                                     </button>
                                                 </form>
@@ -44,7 +44,7 @@
                                 </tbody>
                             </table>
                             <div class="">
-                                <a class="btn btn-success btn-lg"
+                                <a class="btn btn-success btn-lg btn-block"
                                     href="{{ route('admin.users.create') }}">Add user</a>
                             </div>
 
