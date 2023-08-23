@@ -1,7 +1,12 @@
 @extends('layouts.app')
 
-@include('partials.header')
 @section('content')
+<style>
+    .custom-candy-image {
+        width: 250px;
+        height: auto;
+    }
+</style>
     <div class="container">
         <h1>Search Results</h1>
 
@@ -27,12 +32,4 @@
         @endif
     </div>
 @endsection
-
-
-<style>
-    .custom-candy-image {
-        width: 250px;
-        height: auto;
-    }
-</style>
 
