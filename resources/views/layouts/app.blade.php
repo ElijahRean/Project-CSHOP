@@ -34,7 +34,7 @@
 <body>
     <div>
         {{-- Header --}}
-        @yield('header')
+        @include('partials.header')
 
         {{-- Content --}}
         <main class="">
@@ -42,7 +42,7 @@
         </main>
 
         {{-- Footer --}}
-        @yield('footer')
+        @include('partials.footer.footer')
     </div>
 </body>
 </html>
