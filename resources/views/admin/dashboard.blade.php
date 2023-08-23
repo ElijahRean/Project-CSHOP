@@ -32,7 +32,7 @@
                                 <i class="fas fa-search"></i>
                             </button>
                             <li class="nav-item d-none d-sm-inline-block">
-                                <a href="{{ route('products')}}" class="nav-link">At home page</a>
+                                <a href="{{ route('home')}}" class="nav-link">At home page</a>
                             </li>
                         </div>
                     </div>
