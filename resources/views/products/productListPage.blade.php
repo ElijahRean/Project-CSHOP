@@ -20,12 +20,10 @@
                 <div class="card-body text-center">
                     <a href="{{ route('product.show', $product->id) }}" class="text-decoration-none"><h4 class="card-title mb-2 text-danger">{{ $product->name }}</h4></a>
                     <div class="card-text">${{ $product->price }}|
-                        <form action{{ route('addproduct.to.cart', $product->id)}} method="POST">
-                            {{-- jauztaisa lai caur formu nosuta id un hardcoded quantity 1 --}}
-                            <a href="{{ route('addproduct.to.cart', $product->id)}}" class="list__item">
-                                <i class="fas fa-shopping-cart" ></i> Add to Cart
-                            </a>
-                            <button type="submit" class="list__item">
+                        <form action="{{ route('cart.add', ['product' => $product->id]) }}" method="POST">
+                            @csrf
+                            <input class="hidden" type="number" name="quantity" value="1">
+                            <button type="submit" class="list__item"><i class="fas fa-shopping-cart" ></i> Add to Cart</button>
                         </form>
                     </div>
                 </div>

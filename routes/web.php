@@ -4,12 +4,12 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\UserController;
-
 use App\Http\Controllers\CandiesController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\ContactFormController;
 use App\Http\Controllers\CandyController;
+use App\Http\Controllers\CartController;
 
 
 /*
@@ -47,7 +47,7 @@ Route::get('/checkout', function () {
 
 Route::get('/', [\App\Http\Controllers\CandyController::class, 'frontPage'])->name('products');
 Route::get('/product/{id}', [CandyController::class, 'separateProduct'])->name('product.show');
-Route::post('/product/{id}', [CandyController::class, 'addProductToCart'])->name('addproduct.to.cart');
+// Route::post('/product/{id}', [CandyController::class, 'addProductToCart'])->name('addproduct.to.cart');
 
 Auth::routes();
 
@@ -57,6 +57,13 @@ Route::middleware(['auth', 'admin'])->group(function () {
     });
 });
 
+
+Route::prefix('cart')->group(function () {
+    Route::get('/', [CartController::class, 'index'])->name('cart.index');
+    Route::post('add/{product}', [CartController::class, 'add'])->name('cart.add');
+    Route::post('remove/{product}', [CartController::class, 'remove'])->name('cart.remove');
+    Route::post('update/{product}', [CartController::class, 'updateQuantity'])->name('cart.updateQuantity');
+});
 //////////////// Products
 
 Route::middleware(['auth', 'admin'])->prefix('admin')->name('admin.')->group(function () {

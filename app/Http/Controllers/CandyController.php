@@ -26,21 +26,21 @@ class CandyController extends Controller
     return view('products.productDetailsPage', compact('product'));
     }
 
-    public function addProductToCart($id)
-    {
-        $product = Candy::findofFail($id);
-        $cart = session()->get('cart', []);
-        if (isset($cart[$id])) {
-            $cart[$id]['quantity']++;
-        } else {
-            $cart[$id] = [
-                'name' => $product->name,
-                'price' => $product->price,
-                'quantity' => 1,
-                'image' => $product->image
-            ];
-        }
-        session()->put('cart', $cart);
-        return redirect()->back()->with('success', 'Product added to cart!');
-    }
+    // public function addProductToCart($id)
+    // {
+    //     $product = Candy::findofFail($id);
+    //     $cart = session()->get('cart', []);
+    //     if (isset($cart[$id])) {
+    //         $cart[$id]['quantity']++;
+    //     } else {
+    //         $cart[$id] = [
+    //             'name' => $product->name,
+    //             'price' => $product->price,
+    //             'quantity' => 1,
+    //             'image' => $product->image
+    //         ];
+    //     }
+    //     session()->put('cart', $cart);
+    //     return redirect()->back()->with('success', 'Product added to cart!');
+    // }
 }

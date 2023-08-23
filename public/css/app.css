@@ -11,6 +11,10 @@
     box-sizing: border-box;
 }
 
+.hidden {
+    display: none;
+}
+
 /* to make icons render propertly */
 .icon::before {
     display: inline-block;
