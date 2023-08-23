@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Candy;
+use App\Models\Product;
 
 class CandyController extends Controller
 {
@@ -15,7 +16,7 @@ class CandyController extends Controller
     // }
     public function frontPage()
     {
-        $products = Candy::all(); // Fetch all products from the database
+        $products = Product::all(); // Fetch all products from the database
 
         return view('products.productListPage', compact('products')); // Pass data to the view
     }

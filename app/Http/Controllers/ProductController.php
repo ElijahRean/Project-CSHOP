@@ -62,8 +62,6 @@ class ProductController extends Controller
             $data['image'] = $name;
         }
 
-
-
         $product = Product::find($id);
         $product->update($data);
 
