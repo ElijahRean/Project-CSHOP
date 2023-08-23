@@ -34,7 +34,7 @@
             <div class="rightSide">
             <input type="text" placeholder="hunt for sugar..">
                 <div class="icons">
-                    <i class="fas fa-shopping-cart" style="color: #fff;"></i>
+                    <a href="/cart"><i class="fas fa-shopping-cart" style="color: #fff;"></i></a>
 
 
                     @auth
