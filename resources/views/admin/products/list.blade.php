@@ -25,6 +25,7 @@
                                         <th scope="col">Description</th>
                                         <th scope="col">Price</th>
                                         <th scope="col">Image</th>
+                                        <th scope="col">Acction</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -36,21 +37,22 @@
                                             <td class="whitespace-wrap ppx-2 py-2">{{ $product->description }}</td>
                                             <td class="whitespace-nowrap px-2 py-2">{{ $product->price }}</td>
                                             <td class="whitespace-nowrap px-2 py-2">
-                                                <img src="{{ asset($product->image) }}" alt="Product Image" width="100">
+                                                <img src="{{ asset($product->image) }}" alt="Product Image" width="150px">
                                             </td>
                                             </td>
 
-                                            <td class="whitespace-nowrap px-6 py-4">
-                                                <a href="{{ route('admin.products.edit', $product) }}" class="text-blue-500 hover:underline">
-                                                <button type="submit" class="text-red-500 hover:underline">
-                                                    Edit
-                                                </button>
-                                            </a>
+                                            <td class="whitespace-nowrap px-2 py-2">
+                                                <a href="{{ route('admin.products.edit', $product) }}"
+                                                    class="text-blue-500 hover:underline">
+                                                    <button type="submit" class="btn btn-info">
+                                                        Edit
+                                                    </button>
+                                                </a>
                                                 <form method="post"
                                                     action="{{ route('admin.products.destroy', $product) }}">
                                                     @csrf
                                                     @method('DELETE')
-                                                    <button type="submit" class="text-red-500 hover:underline">
+                                                    <button type="submit" class=" mt-2 btn btn-danger">
                                                         Delete
                                                     </button>
                                                 </form>
@@ -59,9 +61,9 @@
                                     @endforeach
                                 </tbody>
                             </table>
-                            <div class="flex flex-col-reverse mt-4">
-                                <a class="mr-auto text-black bg-blue-500 border-0 py-2 px-6 focus:outline-none hover:bg-blue-600 rounded"
-                                    href="{{ route('admin.products.create') }}">{{ 'Add product' }}</a>
+                            <div class="">
+                                <a class="btn btn-success btn-lg ml-3"
+                                    href="{{ route('admin.products.create') }}">Add product</a>
                             </div>
                         </div>
                     </div>

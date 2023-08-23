@@ -12,17 +12,40 @@ use Illuminate\Validation\Rules\Password;
 class UserController extends Controller
 {
 
+    // Show all users
     public function index(): View
     {
         $users = User::all();
-
-        return view('admin.users', compact('users'));
+        return view('admin.users.list', compact('users'));
     }
 
-    public function create(): View
-    {
-        return view('admin.user_edit', ['user' => []]);
-    }
+    // Show edit form
+    //     public function edit(User $user)
+    // {
+    //     return view('admin.users.edit', compact('user'));
+    // }
+
+    // Update user
+    // public function update(Request $request, string $id)
+    // {
+    //     $data = $request->validate([
+    //         'name' => ['required', 'string', 'max:255'],
+    //         'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
+    //         'password' => ['required', 'confirmed', Password::defaults()],
+    //     ]);
+
+    //     $user = User::find($id);
+    //     $user->update($data);
+
+    //     return redirect()->route('admin.users.index')->with('success', 'User updated successfully');
+    // }
+
+
+    // public function create(): View
+    // {
+    //     return view('admin.user_edit', ['user' => []]);
+    // }
+
 
     public function store(Request $request): RedirectResponse
     {
@@ -34,19 +57,15 @@ class UserController extends Controller
 
         User::create($request->post());
 
-        return redirect()->route('admin.user.index')->with('status','User has been created successfully.');
+        return redirect()->route('admin.users.index')->with('status','User has been created successfully.');
     }
 
-    public function destroy(User $user): RedirectResponse
+
+    public function destroy(User $user)
     {
         $user->delete();
-
-        return redirect()->route('admin.user.index')
-            ->with('success','Company has been deleted successfully');
+        return redirect()->route('admin.users.index')->with('success', 'User deleted successfully');
     }
-
-
-
 
     protected function login(Request $request)
     {
@@ -72,5 +91,6 @@ class UserController extends Controller
         Auth::logout();
         return redirect('/');
     }
+
 
 }

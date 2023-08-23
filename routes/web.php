@@ -57,8 +57,7 @@ Route::middleware(['auth', 'admin'])->group(function () {
 });
 
 //////////////// Products
-
-Route::middleware(['auth', 'admin'])->prefix('admin')->name('admin.')->group(function () {
+    Route::middleware(['auth', 'admin'])->prefix('admin')->name('admin.')->group(function () {
 
     // Dashboard
     Route::get('/', function () {
@@ -86,6 +85,17 @@ Route::middleware(['auth', 'admin'])->prefix('admin')->name('admin.')->group(fun
 
     // Remove a product
     Route::delete('/products/{product}', [ProductController::class, 'destroy'])->name('products.destroy');
+
+    // Users management /////////////////
+    Route::get('/users', [UserController::class, 'index'])->name('users.index');
+
+    // Route::get('users/{user}/edit', [UserController::class, 'edit'])->name('users.edit');
+
+    Route::post('/users', [ProductController::class, 'store'])->name('users.store');
+
+    Route::delete('users/{user}', [UserController::class, 'destroy'])->name('users.destroy');
+
+    // Route::put('/users/{user}', [UserController::class, 'update'])->name('users.update');
 
 });
 

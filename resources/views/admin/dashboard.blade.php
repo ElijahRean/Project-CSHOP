@@ -3,14 +3,12 @@
 <nav class="navbar navbar-expand navbar-light">
 
     <ul class="navbar-nav">
-        <li class="nav-item">
-            <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
-        </li>
-        <li class="nav-item d-none d-sm-inline-block">
+
+        <li class="nav-item d-none d-sm-inline-block ml-3">
             <a href="{{ route('admin.products.index') }}" class="nav-link">Product list</a>
         </li>
         <li class="nav-item d-none d-sm-inline-block">
-            <a href="#" class="nav-link">User list</a>
+            <a href="{{ route('admin.users.index')}}" class="nav-link">User list</a>
         </li>
     </ul>
 
@@ -33,9 +31,9 @@
                             <button class="btn btn-navbar" type="submit">
                                 <i class="fas fa-search"></i>
                             </button>
-                            <button class="btn btn-navbar" type="button" data-widget="navbar-search">
-                                <i class="fas fa-times"></i>
-                            </button>
+                            <li class="nav-item d-none d-sm-inline-block">
+                                <a href="{{ route('products')}}" class="nav-link">At home page</a>
+                            </li>
                         </div>
                     </div>
                 </form>
