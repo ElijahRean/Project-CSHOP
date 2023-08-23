@@ -14,10 +14,10 @@ return new class extends Migration
         Schema::create('candies', function (Blueprint $table) {
             $table->id();
             $table->string("username");
-            $table->string("price");
+            $table->decimal("price", 65, 2);
             $table->string("color");
             $table->string("description");
-            $table->string("image");
+            $table->string("image")->nullable();
             $table->timestamps();
             $table->softDeletes();
         });

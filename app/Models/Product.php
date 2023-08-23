@@ -12,4 +12,12 @@ class Product extends Model
     use SoftDeletes;
 
     protected $table = 'candies';
+
+    protected $fillable = [
+        'username',
+        'color',
+        'description',
+        'price',
+        'image',
+    ];
 }

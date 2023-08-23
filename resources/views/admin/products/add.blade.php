@@ -3,46 +3,45 @@
 @include('admin.dashboard')
 
 @section('content')
-    <form class="max-w-7xl mx-auto px-4 mt-10 flex flex-col lg:w-1/2" method="POST"
-        action="{{ route('admin.products.store') }}" enctype="multipart/form-data">
-        @csrf
+<form class="max-w-7xl mx-auto px-4 mt-10 flex flex-col lg:w-1/2" method="POST"
+      action="{{ route('admin.products.store') }}" enctype="multipart/form-data">
+    @csrf
 
-        <h3>Add new product</h3>
+    <h3>Add new product</h3>
 
-        @if (session('success'))
-            <div class="alert alert-success">
-                {{ session('success') }}
-            </div>
-        @endif
+    @if (session('success'))
+        <div class="alert alert-success">
+            {{ session('success') }}
+        </div>
+    @endif
 
-        <div>
-            <x-label for="name" :value="__('Name')" />
-            <x-input id="name" class="block mt-1 w-full" type="text" name="name" :value="old('name')" required
-                autofocus />
+    <div class="form-group">
+        <label for="username">Name</label>
+        <input id="username" class="form-control" type="text" name="username" value="{{ old('name') }}" required>
+    </div>
+
+    <div class="form-group mt-4">
+        <label for="color">Color</label>
+        <input id="color" class="form-control" type="text" name="color" value="{{ old('color') }}" required>
+    </div>
+
+    <div class="form-group mt-4">
+        <label for="description">Description</label>
+        <input id="description" class="form-control" type="text" name="description" value="{{ old('description') }}" required>
+    </div>
+
+    <div class="form-group mt-4">
+        <label for="price">Price</label>
+        <input id="price" class="form-control" type="number" step="0.01" pattern="[0-9]*" name="price" value="{{ old('price') }}" required>
+    </div>
+
+    <div class="form-group">
+        <label for="image">Image</label>
+        <input type="file" class="form-control-file" id="image" name="image">
+    </div>
+
+    <button type="submit" class="btn btn-secondary mt-3">Add product</button>
+</form>
         </div>
 
-        <div class="mt-4">
-            <x-label for="color" :value="__('color')" />
-            <x-input id="color" class="block mt-1 w-full" type="text" name="color" :value="old('color')" required />
-        </div>
-
-        <div class="mt-4">
-            <x-label for="description" :value="__('description')" />
-            <x-input id="description" class="block mt-1 w-full" type="text" name="description" :value="old('description')"
-                required />
-        </div>
-
-        <div class="mt-4">
-            <x-label for="price" :value="__('price')" />
-            <x-input id="price" class="block mt-1 w-full" type="value" name="description" :value="old('price')"
-                required />
-        </div>
-
-        <div>
-            <label for="picture">Picture</label>
-            <input type="file" class="form-control box file-upload" id="picture" name="picture">
-        </div>
-
-        <button type="button" class="btn btn-secondary mt-3">Add</button>
-    </form>
 @endsection
