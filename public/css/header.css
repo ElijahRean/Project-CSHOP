@@ -91,7 +91,6 @@ header {
 .buttons {
     display: flex;
     align-items: center;
-    padding-top:20px
 }
 
 .cart-login{
