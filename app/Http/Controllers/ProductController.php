@@ -18,27 +18,26 @@ class ProductController extends Controller
     // Add a new product
     public function store(Request $request) {
 
-        dd($request->all());
+        // dd($request->all());
 
-        // Validate the data before insert to DB
-        $validateData = $request->validate([
-            'username' =>'required',
-            'color' =>'required',
-            'description' =>'required',
+        $data = $request->validate([
+            'name' =>'required|max:255',
+            'color' =>'required|max:255',
+            'description' =>'required|max:1055',
             'price' =>'required|numeric',
-            'image' =>'required|image',
+            'image' =>'required|image|mimes:jpg,png,jpeg,gif,svg|max:2048',
         ]);
 
         // Image upload
-        if ($request->hasFile('image')) {
-            $imagePath = $request->file('image')->store('product_images', 'public');
-            $validatedData['image'] = $imagePath;
-        }
+        $name = $request->file('image')->store('public/images');
+
+        $data['image'] = $name;
+
+        Product::create($data);
 
         // Create a new product
-        Product::create($validateData);
-
-        return redirect()->route('admin.products')->with('success', 'Product added successfully');;
+        // Product::create($validatedData);
+        return redirect()->route('admin.products.index')->with('success', 'Product added successfully');
     }
 
     // Remove a product

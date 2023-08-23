@@ -19,13 +19,11 @@
                                 @endif
                                 <thead>
                                     <tr>
-                                        <th>ID</th>
-                                        <th>Name</th>
-                                        <th>Brand</th>
-                                        <th>Flavor</th>
-                                        <th>Color</th>
+                                        <th >ID</th>
+                                        <th class="w-25">Name</th>
+                                        <th class="w-25">Color</th>
                                         <th>Price</th>
-
+                                        <th class="w-25">Image</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -36,14 +34,16 @@
                                             <td class="whitespace-nowrap px-6 py-4">{{ $product->color }}</td>
                                             <td class="whitespace-nowrap px-6 py-4">{{ $product->price }}</td>
                                             <td class="whitespace-nowrap px-6 py-4">
-
-                                                <a href="{{ route('admin.products.edit', $product) }}"
-                                                    class="text-blue-500 hover:underline">
-                                                    Edit
-                                                </a>
-
+                                                <img src="{{ asset($product->image) }}" alt="Product Image" width="100">
                                             </td>
+                                            </td>
+
                                             <td class="whitespace-nowrap px-6 py-4">
+                                                <a href="{{ route('admin.products.edit', $product) }}" class="text-blue-500 hover:underline">
+                                                <button type="submit" class="text-red-500 hover:underline">
+                                                    Edit
+                                                </button>
+                                            </a>
                                                 <form method="post"
                                                     action="{{ route('admin.products.destroy', $product) }}">
                                                     @csrf
