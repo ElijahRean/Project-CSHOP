@@ -43,5 +43,11 @@ body {
 }
 
 .buttonNice {
-
 }
+
+a {
+    color: var(--brightPink);
+  }
+a:hover {
+    color: var(--cottonCandyDeepPink);
+  }
