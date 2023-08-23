@@ -1,8 +1,6 @@
 @extends('layouts.app')
 
-    <!-- header section -->
-    @include('partials.header')
-
+@section('content')
 <link rel="stylesheet" href="css/about.css">
 
 <div>
@@ -16,6 +14,4 @@
     </form>
   </div>
 </div>
-
-    <!-- footer section -->
-    @include('partials.footer.footer')
+@endsection
