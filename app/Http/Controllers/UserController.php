@@ -54,8 +54,10 @@ class UserController extends Controller
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'password' => ['required', 'confirmed', Password::defaults()],
         ]);
+        // dd($request->post());
 
         User::create($request->post());
+
 
         return redirect()->route('admin.users.index')->with('status','User has been created successfully.');
     }
