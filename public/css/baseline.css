@@ -9,6 +9,10 @@
     --mainColorBlue: rgba(80,155,225);
     --colorLightBlack: #333;
 
+    --brightPink:#FF456A;
+    --logoPink: #FF71B2;
+    --submenuPink: #E05091;
+
     --cottonCandyPink: #ff71b2;
     --cottonCandyLightPink: #ffb8d8;
     --cottonCandyBlue: #509be1;
@@ -17,6 +21,7 @@
     --cottonCandySalmon: #ffa0ad;
 
     --cottonCandyDeepPink: #d30069;
+    --cottonCandyDeepPink:  red;
 
     --white: #ffffff;
     --grey: #333333;
@@ -38,4 +43,5 @@ body {
 }
 
 .buttonNice {
-    
+
+}

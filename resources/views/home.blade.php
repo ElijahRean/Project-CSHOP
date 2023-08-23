@@ -7,20 +7,20 @@
 
 @section('content')
 
-    <!-- slider section -->
+    {{-- <!-- slider section -->
     @include('slider.slider')
 
     <!-- item list section -->
-    @include('partials.products')
-    
-    <!-- sidebarsection 
-    @include('sidebar.sidebar') -->
+    @include('partials.products') --}}
 
+    <!-- sidebarsection
+    @include('sidebar.sidebar') -->
+{{--
     <!-- testimonials -->
     @include('partials.testimonials.testimonials')
 
     <!-- contactform -->
-    @include('partials.contactform.contactform')
+    @include('partials.contactform.contactform') --}}
 @endsection
 
 @section('footer')

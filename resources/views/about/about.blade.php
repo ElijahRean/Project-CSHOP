@@ -1,6 +1,5 @@
 @extends('layouts.app')
 
-@section('content')
     <!-- header section -->
     @include('partials.header')
 
@@ -20,4 +19,3 @@
 
     <!-- footer section -->
     @include('partials.footer.footer')
-@endsection

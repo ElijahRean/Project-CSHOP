@@ -38,8 +38,18 @@ header {
     color: var(--cottonCandyPink);
 }
 .socialMedia a:hover {
-    color: var(--cottonCandyLightPink);
+    color: var(--cottonCandyDeepPink);
 }
+.icons {
+    display: flex;
+    align-items: center;
+    margin-right:10px;
+}
+
+.icons i {
+    margin-left: 10px;
+}
+
 @media (max-width:600px){
     .filterLogo{
     height: 70px;
@@ -64,6 +74,7 @@ header {
     border-top-left-radius: 25px;
     border-bottom-left-radius: 25px;
     height: 50px;
+    text-shadow: 1px 1px 0 hsl(335, 79%, 46%);
 }
 
 .rightSide {
@@ -72,22 +83,34 @@ header {
 }
 
 .rightSide input[type="text"] {
-    padding: 5px 10px;
+    padding: 3px 10px;
     border: none;
     border-radius: 15px;
 }
 
-.icons {
+.buttons {
     display: flex;
     align-items: center;
-    margin-right:10px;
+    padding-top:20px
 }
 
-.icons i {
-    margin-left: 10px;
+.cart-login{
+    color: var(--white);
+}
+.cart-login:hover{
+    color: var(--black);
 }
 
-/* ~~~~~~~~~~~~~~~ menu that sucks ~~~~~~~~~~~~~~~~~~ */
+.fa-search {
+    color: var(--cottonCandyPink);
+}
+.fa-search a:hover {
+    color: var(--cottonCandyDeepPink);
+}
+
+.candy-search{
+    width: 200px;
+}
 
 .menu {
     font-family: 'Fredoka', sans-serif;
@@ -114,7 +137,7 @@ header {
 .submenu {
     display: none;
     position: absolute;
-    background-color: #AE66D7;
+    background-color: #FF71B2;
     list-style: none;
     z-index:6;
     text-align:left;
