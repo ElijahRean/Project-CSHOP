@@ -86,12 +86,17 @@ Route::middleware(['auth', 'admin'])->group(function () {
     // Remove a product
     Route::delete('/products/{product}', [ProductController::class, 'destroy'])->name('products.destroy');
 
-    // Users management /////////////////
+    /////////// Users management /////////////////
     Route::get('/users', [UserController::class, 'index'])->name('users.index');
 
     // Route::get('users/{user}/edit', [UserController::class, 'edit'])->name('users.edit');
 
-    Route::post('/users', [ProductController::class, 'store'])->name('users.store');
+            // Show form for creating a new user
+            Route::get('/users/create', function () {
+                return view('admin.users.add');
+            })->name('users.create');
+
+    // Route::post('/users', [ProductController::class, 'store'])->name('users.store');
 
     Route::delete('users/{user}', [UserController::class, 'destroy'])->name('users.destroy');
 
