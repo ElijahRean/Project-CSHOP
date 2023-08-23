@@ -1,9 +1,6 @@
 @extends('layouts.app')
 
-@include('partials.header');
-
-@include('slider.slider')
-
+@section('content')
 <div class="container">
     <h1 class="text-center"></h1>
     <div class="row">
@@ -20,6 +17,5 @@
         @endforeach
     </div>
 </div>
-@include('partials.contactform.contactform')
+@endsection
 
-@include('partials.footer.footer');
