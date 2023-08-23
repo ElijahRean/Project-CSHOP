@@ -32,13 +32,14 @@
             </ul>
             <div class="rightSide">
             <div class="buttons">
-                <form action="#" method="GET">
+                <form action="{{ route('candies.search') }}" method="GET">
                     <div class="input-group candy-search">
-                    <input type="text" class="form-control" placeholder="Search for..">
-                    <div class="input-group-append"><button class="btn btn-light" type="button"> <i class="fa fa-search"></i></button></div>
+                    <input type="text" name="search" class="form-control" placeholder="Search for..">
+                    <div class="input-group-append">
+                        <button class="btn btn-light" type="submit"> <i class="fa fa-search"></i></button></div>
                     </div>
                 </form>
-                            
+
                 <form method="/" action="#">
                 <button type="submit" title="Cart" class="btn btn-link cart-login"><i class="fa-solid fa-cart-shopping fa-lg"></i></button>
                 </form>
