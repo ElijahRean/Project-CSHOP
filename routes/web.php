@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\UserController;
-
+use App\Http\Controllers\SearchController;
 use App\Http\Controllers\CandiesController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\RegisterController;
@@ -26,7 +26,7 @@ use App\Http\Controllers\CandyController;
 // Route::get('/', function () {
 //     return view('home');
 // });
-
+Route::get('/search-candies', [SearchController::class, 'search'])->name('candies.search');
 
 // Route::get('/product/{productName}', [ProductController::class, 'show']);
 Route::get('/product', function () {
