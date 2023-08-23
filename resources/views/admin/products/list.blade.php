@@ -9,7 +9,7 @@
                 <div class="overflow-x-auto sm:-mx-6 lg:-mx-8">
                     <div class="inline-block min-w-full py-2 sm:px-6 lg:px-8">
                         <div class="overflow-hidden">
-                            <table class="min-w-full text-left text-sm font-light">
+                            <table class="ml-3 mr-3 table table-bordered ">
 
                                 {{-- Delete successfully! --}}
                                 @if (session('success'))
@@ -19,21 +19,23 @@
                                 @endif
                                 <thead>
                                     <tr>
-                                        <th >ID</th>
-                                        <th class="w-25">Name</th>
-                                        <th class="w-25">Color</th>
-                                        <th>Price</th>
-                                        <th class="w-25">Image</th>
+                                        <th scope="col">ID</th>
+                                        <th scope="col">Name</th>
+                                        <th scope="col">Color</th>
+                                        <th scope="col">Description</th>
+                                        <th scope="col">Price</th>
+                                        <th scope="col">Image</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     @foreach ($products as $product)
-                                        <tr class="border-b dark:border-neutral-500">
-                                            <td class="whitespace-nowrap px-6 py-4">{{ $product->id }}</td>
-                                            <td class="whitespace-nowrap px-6 py-4">{{ $product->username }}</td>
-                                            <td class="whitespace-nowrap px-6 py-4">{{ $product->color }}</td>
-                                            <td class="whitespace-nowrap px-6 py-4">{{ $product->price }}</td>
-                                            <td class="whitespace-nowrap px-6 py-4">
+                                        <tr class="">
+                                            <td class="whitespace-nowrap px-2 py-2">{{ $product->id }}</td>
+                                            <td class="whitespace-nowrap px-2 py-2">{{ $product->name }}</td>
+                                            <td class="whitespace-nowrap px-2 py-2">{{ $product->color }}</td>
+                                            <td class="whitespace-wrap ppx-2 py-2">{{ $product->description }}</td>
+                                            <td class="whitespace-nowrap px-2 py-2">{{ $product->price }}</td>
+                                            <td class="whitespace-nowrap px-2 py-2">
                                                 <img src="{{ asset($product->image) }}" alt="Product Image" width="100">
                                             </td>
                                             </td>
