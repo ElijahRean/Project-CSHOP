@@ -5,6 +5,7 @@
 @import "productListingPage.css";
 @import "baseline.css";
 @import "productDetailsPage.css";
+@import "checkout.css";
 
 *, *:before, *:after {
     box-sizing: border-box;

@@ -25,7 +25,7 @@
         top: 100%;
         left: 0;
         z-index: 100;
-        background-color: var(--cottonCandyLightPink);
+        background-color: var(--logoPink);
         padding: 8px 0;
         width: 100%;
     }
@@ -54,11 +54,11 @@
     }
 
     .has-submenu .submenu {
-        background-color: var(--mainColorLightPink); /* probably needs better color selection */
+        background-color: var(--submenuPink); /* probably needs better color selection */
     }
 
     .has-submenu .submenu li {
-        border-color: var(--cottonCandyLightPink); /* maybe needs color adjustment */
+        border-color: var(--submenuPink); /* maybe needs color adjustment */
     }
 
     /* .menu > li:hover, .submenu > li:hover {
@@ -82,7 +82,7 @@
     }
 
     .top-nav > label {
-        background: var(--cottonCandyPink);
+        background: var(--logoPink);
         display: block;
         padding: 0;
         text-align: right;
@@ -122,11 +122,11 @@
         position: absolute;
         top: 100%;
         left: 3%;
-        background: var(-cottonCandyLightPink);
+        background: var(-logoPink);
     }
 
     .has-submenu .submenu {
-        background-color: var(--cottonCandyLightPink);
+        background-color: var(--logoPink);
     }
 
     .top-nav {
@@ -139,6 +139,6 @@
     }
 
     .submenu li a:hover {
-        background-color: var(--mainColorLightPink);
+        background-color: var(--submenuPink);
     }
 }
