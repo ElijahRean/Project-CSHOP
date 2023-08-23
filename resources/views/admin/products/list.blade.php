@@ -3,13 +3,10 @@
 @include('admin.dashboard')
 
 @section('content')
-    <div class="py-12">
-        <div class="max-w-7xl mx-auto px-4">
-            <div class="flex flex-col">
-                <div class="overflow-x-auto sm:-mx-6 lg:-mx-8">
-                    <div class="inline-block min-w-full py-2 sm:px-6 lg:px-8">
-                        <div class="overflow-hidden ">
-                            <table class="ml-3 mr-3 table table-bordered">
+    <div class="container w-75">
+
+
+                            <table class="table table-bordered ">
 
                                 {{-- Delete successfully! --}}
                                 @if (session('success'))
@@ -44,7 +41,7 @@
                                             <td class="whitespace-nowrap px-2 py-2">
                                                 <a href="{{ route('admin.products.edit', $product) }}"
                                                     class="text-blue-500 hover:underline">
-                                                    <button type="submit" class="btn btn-info">
+                                                    <button type="submit" class="btn btn-info btn-block">
                                                         Edit
                                                     </button>
                                                 </a>
@@ -52,7 +49,7 @@
                                                     action="{{ route('admin.products.destroy', $product) }}">
                                                     @csrf
                                                     @method('DELETE')
-                                                    <button type="submit" class=" mt-2 btn btn-danger">
+                                                    <button type="submit" class=" mt-2 btn btn-danger btn-block">
                                                         Delete
                                                     </button>
                                                 </form>
@@ -62,13 +59,10 @@
                                 </tbody>
                             </table>
                             <div class="">
-                                <a class="btn btn-success btn-lg ml-3"
+                                <a class="btn btn-success btn-lg"
                                     href="{{ route('admin.products.create') }}">Add product</a>
                             </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+
+
     </div>
 @endsection

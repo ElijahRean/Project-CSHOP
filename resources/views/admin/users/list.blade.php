@@ -3,13 +3,9 @@
 @include('admin.dashboard')
 
 @section('content')
-    <div class="py-12">
-        <div class="col-md-8">
-            <div class="flex flex-col">
-                <div class="overflow-x-auto sm:-mx-6 lg:-mx-8">
-                    <div class="inline-block py-2 sm:px-6 lg:px-8">
-                        <div class="overflow-hidden ">
-                            <table class="ml-3 mr-3 table table-bordered">
+    <div class="container w-75">
+
+                            <table class="table table-bordered">
 
                                 {{-- Delete successfully! --}}
                                 @if (session('success'))
@@ -48,13 +44,9 @@
                                 </tbody>
                             </table>
                             <div class="">
-                                <a class="btn btn-success btn-lg ml-3"
+                                <a class="btn btn-success btn-lg"
                                     href="{{ route('admin.users.create') }}">Add user</a>
                             </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+
     </div>
 @endsection

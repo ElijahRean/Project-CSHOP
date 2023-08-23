@@ -91,10 +91,10 @@ Route::middleware(['auth', 'admin'])->group(function () {
 
     // Route::get('users/{user}/edit', [UserController::class, 'edit'])->name('users.edit');
 
-            // Show form for creating a new user
-            Route::get('/users/create', function () {
-                return view('admin.users.add');
-            })->name('users.create');
+    // Show form for creating a new user
+    Route::get('/users/create', function () {
+        return view('admin.users.add');
+    })->name('users.create');
 
     // Route::post('/users', [ProductController::class, 'store'])->name('users.store');
 

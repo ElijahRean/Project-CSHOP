@@ -1,14 +1,17 @@
 @extends('layouts.admin')
 
-<nav class="navbar navbar-expand navbar-light">
+<nav class="navbar navbar-expand navbar-light border-bottom mb-3">
 
-    <ul class="navbar-nav">
+    <ul class="navbar-nav ">
 
         <li class="nav-item d-none d-sm-inline-block ml-3">
             <a href="{{ route('admin.products.index') }}" class="nav-link">Product list</a>
         </li>
         <li class="nav-item d-none d-sm-inline-block">
             <a href="{{ route('admin.users.index')}}" class="nav-link">User list</a>
+        </li>
+        <li class="nav-item d-none d-sm-inline-block">
+            <a href="{{ route('products')}}" class="nav-link">At home page</a>
         </li>
     </ul>
 
@@ -19,7 +22,7 @@
 
     </div>
 
-    <ul class="navbar-nav ml-auto">
+    {{-- <ul class="navbar-nav ml-auto">
 
         <li class="nav-item">
             <div class="navbar-search-block" id="navbar-search1">
@@ -31,14 +34,14 @@
                             <button class="btn btn-navbar" type="submit">
                                 <i class="fas fa-search"></i>
                             </button>
-                            <li class="nav-item d-none d-sm-inline-block">
-                                <a href="{{ route('home')}}" class="nav-link">At home page</a>
-                            </li>
+                        </div>
+                        <div class="mr-3">
+
                         </div>
                     </div>
                 </form>
             </div>
         </li>
 
-    </ul>
+    </ul> --}}
 </nav>
