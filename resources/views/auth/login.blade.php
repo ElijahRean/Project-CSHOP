@@ -44,7 +44,9 @@
                                 <a href="{{ route('register') }}" class="btn btn-link">Or Register</a>
                             </div>
                         </div>
-
+                        @if(request()->has('product'))
+                        <input type="hidden" name="intended" value="{{ request()->input('product') }}">
+                        @endif
                         <div class="row mb-0">
                             <div class="col-md-8 offset-md-4">
                                 <button type="submit" class="btn btn-primary">
