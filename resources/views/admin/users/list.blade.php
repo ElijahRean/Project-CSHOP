@@ -15,7 +15,19 @@
                                 @endif
                                 <thead>
                                     <tr>
-                                        <th scope="col">ID</th>
+                                        <th scope="col"><a
+                                            href="{{ route('admin.users.index', ['sort' => 'id', 'order' => $sortColumn === 'id' && $sortOrder === 'asc' ? 'desc' : 'asc']) }}"
+                                            class="mr-4">ID
+                                            @if ($sortColumn === 'id')
+                                                @if ($sortOrder === 'asc')
+                                                    <i class="fas fa-sort-up ml-1"></i>
+                                                @else
+                                                    <i class="fas fa-sort-down ml-1"></i>
+                                                @endif
+                                            @else
+                                                <i class="fas fa-sort ml-1"></i>
+                                            @endif
+                                        </a></th>
                                         <th scope="col">Userame</th>
                                         <th scope="col">Email</th>
                                         <th scope="col">Action</th>

@@ -13,10 +13,14 @@ class UserController extends Controller
 {
 
     // Show all users
-    public function index(): View
+    public function index(Request $request): View
     {
-        $users = User::all();
-        return view('admin.users.list', compact('users'));
+        $sortColumn = $request->query('sort', 'id');
+        $sortOrder = $request->query('order', 'asc');
+
+        $users = User::orderBy($sortColumn, $sortOrder)->get();
+
+        return view('admin.users.list', compact('users', 'sortColumn', 'sortOrder'));
     }
 
     // Show edit form
