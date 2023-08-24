@@ -40,14 +40,14 @@
     height: auto;
     border-radius: 15px;
     object-fit: cover;
-    padding-bottom:20px;
+    /* padding-bottom:20px; */
 }
 
 .product-info {
     flex: 1;
     padding-left: 20px;
     padding-bottom:20px;
-    flex-wrap:wrap; 
+    flex-wrap:wrap;
     min-width:300px;
 }
 

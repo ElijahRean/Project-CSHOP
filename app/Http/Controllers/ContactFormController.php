@@ -21,6 +21,6 @@ class ContactFormController extends Controller
 
         // Mail::to('john@example.com')->send(new ContactForm($data));
 
-        return redirect()->back()->with('success', 'Your sweet request has been sent');
+        return redirect()->back()->with('success', 'Your sweet request has been sent! :)');
     }
 }
