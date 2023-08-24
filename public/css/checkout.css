@@ -1,3 +1,8 @@
+h1 {
+    text-align: center;
+    margin-top: 1rem;
+    margin-bottom: -2rem;
+}
 
 .checkout-container {
     background: radial-gradient(circle at top, var(--white) , var(--cottonCandyTeaRose));
@@ -10,12 +15,28 @@
     box-shadow: 0px 0px 30px 5px #cfcfcf;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 2rem repeat(4, 1fr);
+    grid-template-rows: 2rem repeat(4, 1fr) auto auto;
     gap: 0.5rem;
+
+}
+
+.checkout-summary {
+    grid-area: 6 / 1 / 7 / 3;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.checkout-button {
+    grid-area: 7 / 1 / 8 / 3;
+    display: flex;
+    align-items: center;
 }
 
 .checkout-header {
     grid-column: 1/3;
+    text-align: center;
 }
 
 .checkout-input-container {
@@ -39,4 +60,13 @@
     padding: 10px 60px;
     font-weight: 500;
     letter-spacing: 2px;
+
 }
+
+
+
+.proceed-payment:hover {
+
+}
+
+
