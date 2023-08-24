@@ -36,6 +36,7 @@ Route::get('/about', function () {
 
 Route::get('/checkout', function () {
     return view('checkout/checkout');
+});
 
 Route::get('/home', function () {
     return view('home');
