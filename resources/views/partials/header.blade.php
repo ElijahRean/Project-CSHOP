@@ -41,7 +41,7 @@
                 <button type="submit" title="Cart" class="btn btn-link cart-login"><i class="fa-solid fa-cart-shopping fa-lg"></i></button>
                 </form>
                 @auth
-                    <form method="GET" action="{{ route('logout') }}">
+                    <form method="POST" action="{{ route('logout') }}">
                      @csrf
                         <button type="submit" title="Logout" class="btn btn-link cart-login"><i class="fa-solid fa-right-from-bracket fa-lg"></i></button>
                     </form>
