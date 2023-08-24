@@ -27,9 +27,9 @@
                     </label>
                     <input type="checkbox" id="about">
                     <ul class="submenu">
-                        <li><a href="#">Chocolates</a></li>
-                        <li><a href="#">Caramel candies</a></li>
-                        <li><a href="#">Weird candies</a></li>
+                        <li><a href="#">red candies</a></li>
+                        <li><a href="#">yellow candies</a></li>
+                        <li><a href="#">weird candies</a></li>
                     </ul>
                 </li>
                 <li class=""><a href="{{ route('about') }}">About us</a></li>

@@ -14,3 +14,8 @@
     border:0;
     border-radius: 20px;
 }
+
+.card-search{
+    background-color: transparent;
+    border:0;
+}

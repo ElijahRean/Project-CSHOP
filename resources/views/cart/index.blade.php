@@ -6,7 +6,7 @@
 
 <div class="cart-container">
     <div class="cart-header">
-        <div class="cart-name"><strong>Shopping Cart</strong></div>
+        <h2><strong>Shopping Cart</strong><h2>
     </div>
     <div class="cart-body">
         @foreach($products as $product)
@@ -36,9 +36,10 @@
         </div>
         @endif
         @endforeach
+        <hr>
     </div>
     <div class="cart-footer">
-        <div class="cart-total"><strong>${{ number_format($total, 2) }}</strong></div>
+            <div class="cart-total"><strong>${{ number_format($total, 2) }}</strong></div>
         <a href="/checkout"><button class="button-nice center" style="width:200px;">Checkout</button></a>
     </div>
 </div>

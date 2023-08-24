@@ -11,11 +11,11 @@ body {
 
   .contact-form {
     padding: 30px 40px;
-    background: linear-gradient(190deg, var(--mainColorLightPink) 0%, var(--mainColorMediumPink) 100%);
-    border:1px solid #fff7f7;
+    background: radial-gradient(circle at top, var(--white) , var(--cottonCandyTeaRose));
+    border:2px solid #ffe7e7;
     border-radius: 12px;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 2px 2px 0px, rgba(60, 64, 67, 0.15) 0px 3px 6px 2px;
     max-width: 800px;
-    box-shadow: var(--mainColorMediumPink) 0px 0px 11px 0px;
   }
 
   .contact-form textarea {

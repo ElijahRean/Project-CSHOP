@@ -16,7 +16,6 @@
 
         <div class="footer__column">
             <h3 class="nav__title">Customer care</h3>
-
             <ul class="nav__ul">
                 <li><a href="#" class="list__item">FAQs</a></li>
                 <li><a href="#" class="list__item">Return policy</a></li>
