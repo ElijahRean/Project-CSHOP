@@ -14,9 +14,9 @@
                     {{ session('success') }}
                 </div>
             @endif
-            <thead>
+            <thead style="text-align:center">
                 <tr>
-                    <th scope="col"><a
+                    <th scope="col" ><a
                             href="{{ route('admin.products.index', ['sort' => 'id', 'order' => $sortColumn === 'id' && $sortOrder === 'asc' ? 'desc' : 'asc']) }}"
                             class="mr-4">ID
                             @if ($sortColumn === 'id')
@@ -61,20 +61,20 @@
                     <th scope="col">Action</th>
                 </tr>
             </thead>
-            <tbody>
+            <tbody >
                 @foreach ($products as $product)
                     <tr class="">
-                        <td class="whitespace-nowrap px-2 py-2 ">{{ $product->id }}</td>
-                        <td class="whitespace-nowrap px-2 py-2">{{ $product->name }}</td>
-                        <td class="whitespace-nowrap px-2 py-2">{{ $product->color }}</td>
-                        <td class="whitespace-wrap ppx-2 py-2">{{ $product->description }}</td>
-                        <td class="whitespace-nowrap px-2 py-2">{{ $product->price }}</td>
-                        <td class="whitespace-nowrap px-2 py-2">
+                        <td class="align-middle text-center px-2 py-2">{{ $product->id }}</td>
+                        <td class="align-middle text-center px-2 py-2">{{ $product->name }}</td>
+                        <td class="align-middle text-center px-2 py-2">{{ $product->color }}</td>
+                        <td class="align-middle px-2 py-2">{{ $product->description }}</td>
+                        <td class="align-middle text-center px-2 py-2">{{ $product->price }}</td>
+                        <td class="align-middle px-2 py-2">
                             <img src="{{ asset($product->image) }}" alt="Product Image" width="150px">
                         </td>
                         </td>
 
-                        <td class="whitespace-nowrap px-2 py-2">
+                        <td class="align-middle px-2 py-2">
                             <a href="{{ route('admin.products.edit', $product) }}" class="text-blue-500 hover:underline">
                                 <button type="submit" class="btn btn-info btn-block">
                                     Edit
