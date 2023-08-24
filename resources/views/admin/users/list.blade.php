@@ -34,13 +34,13 @@
                     <th scope="col">Action</th>
                 </tr>
             </thead>
-            <tbody>
+            <tbody style="text-align:center">
                 @foreach ($users as $user)
                     <tr>
-                        <td class="text-center">{{ $user->id }}</td>
-                        <td>{{ $user->username }}</td>
-                        <td>{{ $user->email }}</td>
-                        <td class="text-center">
+                        <td class="align-middle">{{ $user->id }}</td>
+                        <td class="align-middle">{{ $user->username }}</td>
+                        <td class="align-middle">{{ $user->email }}</td>
+                        <td class="align-middle">
                             <form method="POST" action="{{ route('admin.users.destroy', $user) }}">
                                 @csrf
                                 @method('DELETE')
