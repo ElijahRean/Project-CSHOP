@@ -10,9 +10,14 @@ class ProductController extends Controller
 {
 
     // Fetch all products and display
-    public function index() {
-        $products = Product::all();
-        return view('admin.products.list', compact('products'));
+    public function index(Request $request) {
+
+        $sortColumn = $request->query('sort', 'id');
+        $sortOrder = $request->query('order', 'asc');
+
+        $products = Product::orderBy($sortColumn, $sortOrder)->get();
+
+        return view('admin.products.list', compact('products', 'sortColumn', 'sortOrder'));
     }
 
     // Add a new product
@@ -57,12 +62,11 @@ class ProductController extends Controller
             'image' =>'image|mimes:jpg,png,jpeg,gif,svg|max:2048',
         ]);
 
-        if ($name = $request->file('image')->store('public/images')) {
+        if ($request->hasFile('image')) {
+            $name = $request->file('image')->store('public/images');
             $name = str_replace('public', 'storage', $name);
             $data['image'] = $name;
         }
-
-
 
         $product = Product::find($id);
         $product->update($data);

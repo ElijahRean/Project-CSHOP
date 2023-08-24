@@ -40,7 +40,7 @@
         <input type="file" class="form-control-file" id="image" name="image">
     </div>
 
-    <button type="submit" class="btn btn-secondary mt-3">Add product</button>
+    <button type="submit" class="btn btn-success btn-lg mb-5 mt-2">Add product</button>
 </form>
         </div>
 
