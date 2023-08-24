@@ -41,7 +41,7 @@ Route::get('/cart', function () {
 
 Route::get('/about', function () {
     return view('about/about');
-});
+})->name('about');
 
 Route::get('/checkout', function () {
     return view('checkout/checkout');

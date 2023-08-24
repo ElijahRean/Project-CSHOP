@@ -3,6 +3,7 @@
 
 @section('content')
     <script type="text/javascript" src="{{ asset('js/toggleTheme.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('js/quantity.js') }}"></script>
 
     <div class="container">
             <div class="product-content">
@@ -19,15 +20,18 @@
                         <p class="parameter"><strong>Color:</strong> {{ $product->color }}</p>
                         <p class="parameter"><strong>Price:</strong> <span class="price">{{ $product->price }}</span></p>
                     </div>
-                    <div id="quantityContainer"><strong>Quantity:</strong>
-                            <button class="quantity-btn minus-btn">-</button>
+                    <form action="{{ route('cart.add', $product->id) }}" method="POST">
+                        @csrf
+                        <div id="quantityContainer"><strong>Quantity:</strong>
+                            <button type="button" class="quantity-btn minus-btn">-</button>
                                 <div class="quantityContainer" id="quantityDisplay">0</div>
-                            <button class="quantity-btn plus-btn">+</button>
+                                <input class="d-none" id="quantityValue" type="number" value="0" name="quantity">
+                            <button type="button" class="quantity-btn plus-btn">+</button>
                         </div>
-                    <div class="gradient-buttons">
-                        <button class="btn btn-danger">Add to Cart</button>
-                        <button class="btn btn-danger">Buy Now</button>
-                    </div>
+                        <div class="gradient-buttons">
+                            <button type="submit" class="btn btn-danger">Add to Cart</button>
+                        </div>
+                    </form>
                 </div>
             </div>
 

@@ -7,7 +7,7 @@
             <h3 class="nav__title ">Candy warehouse</h3>
 
             <ul class="nav__ul">
-                <li><a href="#" class="list__item">About us</a></li>
+                <li><a href="{{ route('about')}} " class="list__item">About us</a></li>
                 <li><a href="#" class="list__item">Come visit us</a></li>
                 <li><a href="#" class="list__item">Candy partners</a></li>
             </ul>
@@ -32,6 +32,7 @@
                 <li><a href="#" class="list__item">Corporate gifts</a></li>
                 <li><a href="#" class="list__item">Wedding candy</a></li>
                 <li><a href="#" class="list__item">Gluten free candy</a></li>
+
             </ul>
         </div>
 
@@ -46,7 +47,7 @@
         </div>
     </div>
 <div class="footer__links">
-    <div class="footer__copyright">&copy; All Rights Reserved 2023</div>
+    <div class="footer__copyright">&copy; All Rights Reserved by EastSquade 2023</div>
 </div>
 </div>
 </div>
