@@ -4,12 +4,6 @@
 
 @include('slider.slider')
 
-@if(session('success'))
-    <div class="alert alert-success">
-        {{ session('success') }}
-    </div>
-@endif
-
 <div class="container">
     <h1 class="text-center"></h1>
     <div class="row">
