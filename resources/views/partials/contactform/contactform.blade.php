@@ -21,7 +21,7 @@
 
             {{-- Alert message --}}
             @if (session('success'))
-                <div class="alert alert-success">
+                <div class="alert alert-danger text-center text-black">
                     {{ session('success') }}
                 </div>
             @endif
