@@ -47,7 +47,7 @@
     flex: 1;
     padding-left: 20px;
     padding-bottom:20px;
-    flex-wrap:wrap; 
+    flex-wrap:wrap;
     min-width:300px;
 }
 
@@ -153,6 +153,7 @@
 
 }
 
+
 .quantity-btn {
     background-color: transparent !important;
     border: none;
@@ -174,6 +175,10 @@
     background-color: #3394d3;
 
 
+}
+
+.quantity-btn:focus{
+    outline: none;
 }
 
 #quantityDisplay {
