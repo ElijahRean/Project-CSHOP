@@ -25,10 +25,8 @@
                     {{ session('success') }}
                 </div>
             @endif
-
-
             <div class="submit-button-wrapper">
-                <input type="submit" value="Send">
+                <button type="submit" class="button-nice" style="width:200px;">Send</button>
             </div>
         </form>
     </div>

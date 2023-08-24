@@ -8,10 +8,10 @@ header {
 
 .background {
         position: absolute;
-        top: 130px;
+        top: 154px;
         left: 0;
         width: 100%;
-        height: 50px;
+        height: 3px;
         z-index: -1;
         background: var(--cottonCandyLightPink);
         background: linear-gradient(90deg, rgba(255,184,216,0) 0%, var(--cottonCandyLightPink) 15%, var(--cottonCandyLightPink) 95%, rgba(255,184,216,0) 100%);
@@ -23,6 +23,7 @@ header {
     align-items: flex-start;
     max-width: 1200px;
     margin: 0 auto;
+    padding-left:15px;
 }
 .filterLogo {
     filter: invert(63%) sepia(87%) saturate(1716%) hue-rotate(295deg) brightness(101%) contrast(102%);
@@ -60,21 +61,26 @@ header {
     .background {
         display: none;
     }
+    .top-nav {
+        border-radius: 0;
+    }
 }
+
 .top-nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
     max-width: 1200px;
     margin: 0 auto;
-    background: #FF71B2;
-    background: linear-gradient(90deg, #FF71B2 74%, #ffb8d8 100%);
-    font-family: 'Raleway', sans-serif;
-    font-size:1.2em;
-    border-top-left-radius: 25px;
-    border-bottom-left-radius: 25px;
+    font-family: 'Quicksand', sans-serif;
+    font-size:1.3em;
+    border-radius: 25px;
     height: 50px;
-    text-shadow: 1px 1px 0 hsl(335, 79%, 46%);
+    background: #ff4086;
+    border: 1px solid #ffd5e1;
+    background: linear-gradient(to bottom, var(--cottonCandyPink), #e23566);
+    box-shadow: #ff3b7c 0px 0px 4px 0px;
+    text-shadow: #781934 1px 1px 1px;
 }
 
 .rightSide {
@@ -91,8 +97,12 @@ header {
 .buttons {
     display: flex;
     align-items: center;
-    padding-top:20px
 }
+
+.form-rounded {
+    border-top-right-radius: 17px;
+    border-bottom-right-radius: 17px;
+  }
 
 .cart-login{
     color: var(--white);
@@ -113,7 +123,7 @@ header {
 }
 
 .menu {
-    font-family: 'Fredoka', sans-serif;
+    font-family: 'Quicksand', sans-serif;
     list-style: none;
     margin: 0;
     display: flex;
@@ -137,7 +147,7 @@ header {
 .submenu {
     display: none;
     position: absolute;
-    background-color: #FF71B2;
+    background-color: var(--cottonCandyDeepPink);
     list-style: none;
     z-index:6;
     text-align:left;

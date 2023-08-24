@@ -1,9 +1,7 @@
 
 @extends('layouts.app')
 
-
-    @include('partials.header')
-
+@section('content')
     <script type="text/javascript" src="{{ asset('js/toggleTheme.js') }}"></script>
 
     <div class="container">
@@ -34,4 +32,4 @@
             </div>
 
     </div>
-    @include('partials.footer.footer')
+@endsection

@@ -3,13 +3,15 @@
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\CartController;
 use App\Http\Controllers\UserController;
-
+use App\Http\Controllers\SearchController;
 use App\Http\Controllers\CandiesController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\ContactFormController;
 use App\Http\Controllers\CandyController;
+
 
 
 /*
@@ -26,7 +28,7 @@ use App\Http\Controllers\CandyController;
 // Route::get('/', function () {
 //     return view('home');
 // });
-
+Route::get('/search-candies', [SearchController::class, 'search'])->name('candies.search');
 
 // Route::get('/product/{productName}', [ProductController::class, 'show']);
 Route::get('/product', function () {
@@ -55,7 +57,14 @@ Route::middleware(['auth', 'admin'])->group(function () {
         return view('adminpanel/admin_page');
     });
 });
+//////////////// Cart
 
+Route::prefix('cart')->group(function () {
+    Route::get('/', [CartController::class, 'index'])->name('cart.index');
+    Route::post('add/{product}', [CartController::class, 'add'])->name('cart.add');
+    Route::post('remove/{product}', [CartController::class, 'remove'])->name('cart.remove');
+    Route::post('update/{product}', [CartController::class, 'updateQuantity'])->name('cart.updateQuantity');
+});
 //////////////// Products
     Route::middleware(['auth', 'admin'])->prefix('admin')->name('admin.')->group(function () {
 

@@ -8,17 +8,13 @@ use App\Models\Product;
 
 class CandyController extends Controller
 {
-    // public function index()
-    // {
-    //     $products = Candy::all(); // Fetch all products from the database
-
-    //     return view('test.products-test', compact('products')); // Pass data to the view
-    // }
     public function frontPage()
     {
         $products = Product::all(); // Fetch all products from the database
 
-        return view('products.productListPage', compact('products')); // Pass data to the view
+        // return view('products.productListPage', compact('products'));
+
+        return view('home', compact('products')); // Pass data to the view
     }
     public function separateProduct($id)
     {
