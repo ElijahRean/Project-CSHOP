@@ -92,6 +92,31 @@
                 @endforeach
             </tbody>
         </table>
+
+        <div class="d-flex justify-content-center mt-4">
+            <ul class="pagination">
+                <li class="page-item {{ $products->previousPageUrl() ? '' : 'disabled' }}">
+                    <a class="page-link" href="{{ $products->previousPageUrl() }}" aria-label="Previous">
+                        <span aria-hidden="true">&laquo;</span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                </li>
+                    @for ($i = 1; $i <= $products->lastPage(); $i++)
+                        <li class="page-item {{ $i == $products->currentPage() ? 'active' : '' }}">
+                        <a class="page-link" href=" {{ $products->url($i) }}" aria-label="Next">{{ $i }}</a>
+                        </li>
+                    @endfor
+                    <li class="page-item {{ $products->nextPageUrl() ? '' : 'disabled' }}">
+                        <a class="page-link" href="{{ $products->nextPageUrl() }}" aria-label="Next">
+
+                            <span aria-hidden="true">&raquo;</span>
+                            <span class="sr-only">Next</span>
+                        </a>
+                    </li>
+
+            </ul>
+        </div>
+
         <div class="">
             <a class="btn btn-success btn-lg btn-block mb-5" href="{{ route('admin.products.create') }}">Add product</a>
         </div>
