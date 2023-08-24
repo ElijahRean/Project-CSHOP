@@ -60,7 +60,7 @@
                         <button type="submit" title="Logout" class="btn btn-link cart-login"><i class="fa-solid fa-right-from-bracket fa-lg"></i></button>
                     </form>
                     @else
-                    <form method="POST" action="{{ route('login') }}">
+                    <form method="GET" action="{{ route('login') }}">
                     <button type="submit" title="Login" class="btn btn-link cart-login"><i class="fa-solid fa-right-to-bracket fa-lg"></i></button>
                     </form>
                 @endauth
