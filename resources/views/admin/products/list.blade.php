@@ -14,7 +14,7 @@
                     {{ session('success') }}
                 </div>
             @endif
-            <thead>
+            <thead style="text-align:center">
                 <tr>
                     <th scope="col"><a
                             href="{{ route('admin.products.index', ['sort' => 'id', 'order' => $sortColumn === 'id' && $sortOrder === 'asc' ? 'desc' : 'asc']) }}"
@@ -61,7 +61,7 @@
                     <th scope="col">Action</th>
                 </tr>
             </thead>
-            <tbody>
+            <tbody >
                 @foreach ($products as $product)
                     <tr class="">
                         <td class="whitespace-nowrap px-2 py-2 ">{{ $product->id }}</td>
