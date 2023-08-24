@@ -8,9 +8,9 @@
     <div class="container">
             <div class="product-content">
                 <div class="product-images">
-                <img class="main-image" src="{{ url($product->image) }}" alt="Product Image">
+                    <img class="main-image" src="{{ url($product->image) }}" alt="Product Image">
 
-                    </div>
+                </div>
                 <div class="product-info">
                 <h1 class="product-heading text-left">{{ $product->name }}</h1>
                     <div class="description">

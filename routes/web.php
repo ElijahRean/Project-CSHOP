@@ -11,6 +11,7 @@ use App\Http\Controllers\ProductController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\ContactFormController;
 use App\Http\Controllers\CandyController;
+use App\Http\Controllers\CheckoutController;
 
 
 
@@ -31,11 +32,11 @@ Route::get('/cart', function () {
 
 Route::get('/about', function () {
     return view('about/about');
-})->name('about');
 
 Route::get('/checkout', function () {
     return view('checkout/checkout');
 });
+
 Route::get('/home', function () {
     return view('home');
 });
@@ -55,7 +56,6 @@ Route::middleware(['auth', 'admin'])->group(function () {
         return view('adminpanel/admin_page');
     });
 });
-
 
 //////////////// Products
 Route::middleware(['auth', 'admin'])->prefix('admin')->name('admin.')->group(function () {
@@ -123,3 +123,7 @@ Route::post('/contact', [ContactFormController::class, 'sendContactForm'])->name
 
 Route::get('/candies', [CandiesController::class, 'index'])->name('candies.index');
 Route::get('/candies/{id}', [CandiesController::class, 'show'])->name('candies.show');
+
+
+Route::get('/checkout', [CheckoutController::class, 'index'])->name('checkout.index');
+Route::post('/checkout/place-order', [CheckoutController::class, 'placeOrder'])->name('checkout.place-order');
