@@ -23,11 +23,12 @@
         display: none;
         position: absolute;
         top: 100%;
-        left: 0;
+        left: 20px;
         z-index: 100;
         background-color: var(--cottonCandySalmon);
         padding: 8px 0;
-        width: 100%;
+        width: 88%;
+        margin:auto;
     }
 
     input[type="checkbox"]:checked + .menu {
@@ -82,9 +83,9 @@
     }
 
     .top-nav > label {
-        background: var(--logoPink);
+        background-color:transparent;
         display: block;
-        padding: 0;
+        padding-left: 10px;
         text-align: right;
         margin: 0;
         font-size: 24px;
