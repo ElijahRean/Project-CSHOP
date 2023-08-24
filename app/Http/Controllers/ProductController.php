@@ -57,7 +57,8 @@ class ProductController extends Controller
             'image' =>'image|mimes:jpg,png,jpeg,gif,svg|max:2048',
         ]);
 
-        if ($name = $request->file('image')->store('public/images')) {
+        if ($request->hasFile('image')) {
+            $name = $request->file('image')->store('public/images');
             $name = str_replace('public', 'storage', $name);
             $data['image'] = $name;
         }

@@ -14,6 +14,12 @@
                     <form method="POST" action="{{ route('admin.users.store') }}">
                         @csrf
 
+                        @if (session('success'))
+                        <div class="alert alert-success">
+                            {{ session('success') }}
+                        </div>
+                    @endif
+
                         <div class="row mb-3">
                             <label for="name" class="col-md-4 col-form-label text-md-end">{{ __('Name') }}</label>
 
@@ -64,11 +70,16 @@
                             </div>
                         </div>
 
-                        <input type="checkbox" class="form-control" name="is_admin" value='1'>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="1" id="defaultCheck1" name="is_admin">
+                            <label class="form-check-label " for="defaultCheck1">
+                              Admin rights
+                            </label>
+                          </div>
 
                         <div class="row mb-0">
                             <div class="col-md-6 offset-md-4">
-                                <button type="submit" class="btn btn-primary">
+                                <button type="submit" class="btn btn-block btn-success">
                                     Add new user
                                 </button>
                             </div>
