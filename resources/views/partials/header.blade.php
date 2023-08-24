@@ -37,34 +37,27 @@
             </ul>
             <div class="rightSide">
             <div class="buttons">
-            <div class="input-group p-5">
-                <input class="form-control py-2 border-right-0 border form-rounded" type="search" value="search" id="search-form">
-                <span class="input-group-append">
-                    <div class="input-group-text bg-white form-rounded" onclick="submitForm()"><i class="fa fa-search"></i></div>
-                </span>
-            </div>
-                <form action="{{ route('candies.search') }}" method="GET">
-                    <div class="input-group candy-search">
-                    <input type="text" name="search" class="form-control" placeholder="Search for..">
-                    <div class="input-group-append">
-                        <button class="btn btn-light" type="submit"> <i class="fa fa-search"></i></button></div>
-                    </div>
-                </form>
-
                 <form method="GET" action="{{ route('cart.index') }}">
                 <button type="submit" title="Cart" class="btn btn-link cart-login"><i class="fa-solid fa-cart-shopping fa-lg"></i></button>
                 </form>
                 @auth
-                    <form method="POST" action="{{ route('logout') }}">
+                    <form method="GET" action="{{ route('logout') }}">
                      @csrf
                         <button type="submit" title="Logout" class="btn btn-link cart-login"><i class="fa-solid fa-right-from-bracket fa-lg"></i></button>
                     </form>
                     @else
                     <form method="GET" action="{{ route('login') }}">
-                    <button type="submit" title="Login" class="btn btn-link cart-login"><i class="fa-solid fa-right-to-bracket fa-lg"></i></button>
+                    <button type="submit" title="Login" class="btn btn-link cart-login"><i class="fa-solid fa-user fa-lg"></i></button>
                     </form>
                 @endauth
-                </div>
+                <form action="{{ route('candies.search') }}" method="GET">
+                    <div class="input-group candy-search">
+                    <input type="text" name="search" class="form-control" placeholder="Search for..">
+                    <div class="input-group-append">
+                        <button class="input-group-text bg-white form-rounded" style="outline:none; border-style: none;" type="submit"> <i class="fa fa-search"></i></button></div>
+                    </div>
+                </form>
+            </div>
             </div>
     </nav>
 </header>
