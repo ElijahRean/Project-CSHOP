@@ -3,7 +3,7 @@
 
 @section('content')
     <script type="text/javascript" src="{{ asset('js/toggleTheme.js') }}"></script>
-    <script type="text/javascript" src="{{ asset('js/quantity.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('js/quantity-pdp.js') }}"></script>
 
     <div class="container">
             <div class="product-content">

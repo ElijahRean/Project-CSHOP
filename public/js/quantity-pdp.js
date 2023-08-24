@@ -16,8 +16,6 @@
         function updateQuantityDisplay() {
             quantityDisplay.textContent = quantity;
             quantityValue.value = quantity;
-            console.log(quantity);
-            console.log(quantityValue.value);
         }
 
         // Add event listener to the plus button
