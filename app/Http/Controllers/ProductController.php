@@ -15,7 +15,7 @@ class ProductController extends Controller
         $sortColumn = $request->query('sort', 'id');
         $sortOrder = $request->query('order', 'asc');
 
-        $products = Product::orderBy($sortColumn, $sortOrder)->get();
+        $products = Product::orderBy($sortColumn, $sortOrder)->paginate(6);
 
         return view('admin.products.list', compact('products', 'sortColumn', 'sortOrder'));
     }
