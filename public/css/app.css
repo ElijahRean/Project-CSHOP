@@ -19,13 +19,11 @@
   }
 
 .footer-background {
-    background: var(--white);
-    background: radial-gradient(circle at bottom, var(--white) , var(--cottonCandyTeaRose));
 }
+
 .footer {
     max-width:1200px;
     margin: 20px auto 0px;
-    border-top: 2px solid var(--cottonCandyLightPink);
 }
 
 .footer__container {
