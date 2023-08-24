@@ -6,7 +6,7 @@
 </script>
     <div class="background"></div>
     <div class="logoSection">
-        <img src="{{url('/images/shopLogo.svg')}}" class="filterLogo"/>
+    <a href="{{ route('home') }}"><img src="{{url('/images/shopLogo.svg')}}" class="filterLogo"/></a>
         <div class="socialMedia icons">
         <a href="#"><i class="fa-brands fa-x-twitter fa-lg"></i></a>
         <a href="#"><i class="fa-brands fa-instagram fa-lg"></i></a>
@@ -21,7 +21,7 @@
         <input type="checkbox" id="menu">
         <ul class="menu">
                 <li class="has-submenu">
-                    <a href="#">Catalogue</a>
+                    <a href="{{ route('home') }}">Catalogue</a>
                     <label title="toggle menu" for="about">
                         <i class="arrow fa fa-caret-down"></i>
                     </label>

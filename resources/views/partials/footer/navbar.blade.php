@@ -9,8 +9,7 @@
             <ul class="nav__ul">
                 <li><a href="{{ route('about')}} " class="list__item">About us</a></li>
                 <li><a href="#" class="list__item">Come visit us</a></li>
-                {{-- <li><a href="#" class="list__item">Candy partners</a></li>
-                <li><a href="#" class="list__item">Site map</a></li> --}}
+                <li><a href="#" class="list__item">Candy partners</a></li>
             </ul>
         </div>
 
@@ -21,8 +20,7 @@
             <ul class="nav__ul">
                 <li><a href="#" class="list__item">FAQs</a></li>
                 <li><a href="#" class="list__item">Return policy</a></li>
-                {{-- <li><a href="#" class="list__item">Terms of service</a></li>
-                <li><a href="#" class="list__item">Privacy policy</a></li> --}}
+                <li><a href="#" class="list__item">Terms of service</a></li>
             </ul>
         </div>
 
@@ -32,9 +30,9 @@
 
             <ul class="nav__ul">
                 <li><a href="#" class="list__item">Corporate gifts</a></li>
-                <li><a href="#" class="list__item">Kosher candy</a></li>
-                {{-- <li><a href="#" class="list__item">Wedding candy</a></li>
-                <li><a href="#" class="list__item">Gluten free candy</a></li> --}}
+                <li><a href="#" class="list__item">Wedding candy</a></li>
+                <li><a href="#" class="list__item">Gluten free candy</a></li>
+
             </ul>
         </div>
 
@@ -44,7 +42,7 @@
             <ul class="nav__ul">
                 <li><a href="#" class="list__item">Call</a></li>
                 <li><a href="#" class="list__item">Email</a></li>
-                {{-- <li><a href="#" class="list__item">Send a message</a></li> --}}
+                <li><a href="#" class="list__item">Send a message</a></li>
             </ul>
         </div>
     </div>
