@@ -2,17 +2,16 @@
 
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\HomeController;
 use App\Http\Controllers\CartController;
+use App\Http\Controllers\HomeController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\CandyController;
 use App\Http\Controllers\SearchController;
 use App\Http\Controllers\CandiesController;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\CheckoutController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\ContactFormController;
-use App\Http\Controllers\CandyController;
-use App\Http\Controllers\CheckoutController;
-
 
 
 /*
@@ -37,7 +36,6 @@ Route::get('/about', function () {
 Route::get('/checkout', function () {
     return view('checkout/checkout');
 });
-
 Route::get('/home', function () {
     return view('home');
 });
