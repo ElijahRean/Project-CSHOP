@@ -12,7 +12,7 @@
 
                     </div>
                 <div class="product-info">
-                <h1 class="product-heading">{{ $product->name }}</h1>
+                <h1 class="product-heading text-left">{{ $product->name }}</h1>
                     <div class="description">
                     <p>{{ $product->description }}</p>
                     </div>
@@ -20,6 +20,7 @@
                         <p class="parameter"><strong>Color:</strong> {{ $product->color }}</p>
                         <p class="parameter"><strong>Price:</strong> <span class="price">{{ $product->price }}</span></p>
                     </div>
+                    @auth
                     <form action="{{ route('cart.add', $product->id) }}" method="POST">
                         @csrf
                         <div id="quantityContainer"><strong>Quantity:</strong>
@@ -29,9 +30,19 @@
                             <button type="button" class="quantity-btn plus-btn">+</button>
                         </div>
                         <div class="gradient-buttons">
-                            <button type="submit" class="btn btn-danger">Add to Cart</button>
+                            <button type="submit" class="button-nice mt-3">Add to Cart</button>
                         </div>
                     </form>
+                    @else
+                    <form action="{{ route('login') }}" method="GET">
+                        @csrf
+                        <input type="hidden" name="product" value="{{ $product->id }}">
+                        <div class="gradient-buttons">
+                            <button type="submit" title="Login" class="button-nice mt-3">Please login to purchase</button>
+                        </div>
+                    </form>
+                    @endauth
+
                 </div>
             </div>
 

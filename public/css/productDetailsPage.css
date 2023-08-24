@@ -54,7 +54,7 @@
 .price {
     font-size: 20px;
     font-weight: bold;
-    color: var(--mainColorBlue);
+    color: var(--cottonCandyDeepPink);
     margin-bottom: 10px;
     display: inline-block;
     padding-left: 10px;
@@ -164,7 +164,7 @@
     justify-content: center;
     align-items: center;
     cursor: pointer;
-    color: var(--mainColorBlue);
+    color: var(--cottonCandyDeepPink);
     outline:none;
     text-decoration: none;
 
@@ -184,7 +184,7 @@
 #quantityDisplay {
     font-size: 24px;
     font-weight: bold;
-    color: var(--mainColorBlue);
+    color: var(--cottonCandyDeepPink);
 }
 
 
