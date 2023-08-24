@@ -97,11 +97,13 @@ header {
 .buttons {
     display: flex;
     align-items: center;
+    padding-right:6px;
 }
 
 .form-rounded {
     border-top-right-radius: 17px;
     border-bottom-right-radius: 17px;
+
   }
 
 .cart-login{
