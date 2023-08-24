@@ -1,8 +1,9 @@
 @extends('layouts.app')
 
-@include('partials.header')
-
-<!-- -->
+@section('content')
+    <h1>Checkout</h1>
+    <form action="{{ route('checkout.place-order') }}" method="post">
+        @csrf>
 <div class="checkout-container">
     <div class="checkout-header">Contact information</div>
     <div class="checkout-input-container">
@@ -37,6 +38,56 @@
         <label for="zip" class="checkout-input-name">ZIP Code *</label>
         <input type="text" id="zip" class="checkout-input-field">
     </div>
-    <button class="proceed-payment">Proceed Payment</button>
+    <table>
+        <thead>
+            <tr>
+                <th>Product</th>
+                <th>Quantity</th>
+                <th>Price</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach ($cartItems as $cartItem)
+                <tr>
+                    <td>{{ $cartItem->product->name }}</td>
+                    <td>{{ $cartItem->quantity }}</td>
+                    <td>${{ $cartItem->product->price }}</td>
+                </tr>
+            @endforeach
+        </tbody>
+        <tfoot>
+            <tr>
+                <th colspan="2">Total:</th>
+                <th>${{ $total }}</th>
+            </tr>
+        </tfoot>
+    </table>
+    <button type="submit" class="proceed-payment">Proceed Payment</button>
+
 </div>
-@include('partials.footer.footer');
+</form>
+    <table>
+        <thead>
+            <tr>
+                <th>Product</th>
+                <th>Quantity</th>
+                <th>Price</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach ($cartItems as $cartItem)
+                <tr>
+                    <td>{{ $cartItem->product->name }}</td>
+                    <td>{{ $cartItem->quantity }}</td>
+                    <td>${{ $cartItem->product->price }}</td>
+                </tr>
+            @endforeach
+        </tbody>
+        <tfoot>
+            <tr>
+                <th colspan="2">Total:</th>
+                <th>${{ $total }}</th>
+            </tr>
+        </tfoot>
+    </table>
+@endsection

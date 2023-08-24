@@ -34,7 +34,10 @@
     </div>
     <div class="cart-footer">
         <div class="cart-total">${{ number_format($total, 2) }}</div>
+        <form action="{{ route('checkout.index') }}" method="get">
+        @csrf
         <button type="submit" class="button-nice" style="width:200px;">Checkout</button>
+        </form>
     </div>
 </div>
 @endsection
