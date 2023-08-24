@@ -55,6 +55,31 @@
                                     @endforeach
                                 </tbody>
                             </table>
+
+                            <div class="d-flex justify-content-center mt-4">
+                                <ul class="pagination">
+                                    <li class="page-item {{ $users->previousPageUrl() ? '' : 'disabled' }}">
+                                        <a class="page-link" href="{{ $users->previousPageUrl() }}" aria-label="Previous">
+                                            <span aria-hidden="true">&laquo;</span>
+                                            <span class="sr-only">Previous</span>
+                                        </a>
+                                    </li>
+                                    @for ($i = 1; $i <= $users->lastPage(); $i++)
+                                        <li class="page-item {{ $i == $users->currentPage() ? 'active' : '' }}">
+                                            <a class="page-link" href=" {{ $users->url($i) }}" aria-label="Next">{{ $i }}</a>
+                                        </li>
+                                    @endfor
+                                    <li class="page-item {{ $users->nextPageUrl() ? '' : 'disabled' }}">
+                                        <a class="page-link" href="{{ $users->nextPageUrl() }}" aria-label="Next">
+
+                                            <span aria-hidden="true">&raquo;</span>
+                                            <span class="sr-only">Next</span>
+                                        </a>
+                                    </li>
+
+                                </ul>
+                            </div>
+
                             <div class="">
                                 <a class="btn btn-success btn-lg btn-block"
                                     href="{{ route('admin.users.create') }}">Add user</a>

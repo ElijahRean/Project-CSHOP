@@ -18,7 +18,7 @@ class UserController extends Controller
         $sortColumn = $request->query('sort', 'id');
         $sortOrder = $request->query('order', 'asc');
 
-        $users = User::orderBy($sortColumn, $sortOrder)->get();
+        $users = User::orderBy($sortColumn, $sortOrder)->paginate(6);
 
         return view('admin.users.list', compact('users', 'sortColumn', 'sortOrder'));
     }

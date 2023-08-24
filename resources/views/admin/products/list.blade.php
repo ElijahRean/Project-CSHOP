@@ -93,6 +93,7 @@
             </tbody>
         </table>
 
+        {{-- // Pagination  --}}
         <div class="d-flex justify-content-center mt-4">
             <ul class="pagination">
                 <li class="page-item {{ $products->previousPageUrl() ? '' : 'disabled' }}">
@@ -101,18 +102,18 @@
                         <span class="sr-only">Previous</span>
                     </a>
                 </li>
-                    @for ($i = 1; $i <= $products->lastPage(); $i++)
-                        <li class="page-item {{ $i == $products->currentPage() ? 'active' : '' }}">
+                @for ($i = 1; $i <= $products->lastPage(); $i++)
+                    <li class="page-item {{ $i == $products->currentPage() ? 'active' : '' }}">
                         <a class="page-link" href=" {{ $products->url($i) }}" aria-label="Next">{{ $i }}</a>
-                        </li>
-                    @endfor
-                    <li class="page-item {{ $products->nextPageUrl() ? '' : 'disabled' }}">
-                        <a class="page-link" href="{{ $products->nextPageUrl() }}" aria-label="Next">
-
-                            <span aria-hidden="true">&raquo;</span>
-                            <span class="sr-only">Next</span>
-                        </a>
                     </li>
+                @endfor
+                <li class="page-item {{ $products->nextPageUrl() ? '' : 'disabled' }}">
+                    <a class="page-link" href="{{ $products->nextPageUrl() }}" aria-label="Next">
+
+                        <span aria-hidden="true">&raquo;</span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </li>
 
             </ul>
         </div>
