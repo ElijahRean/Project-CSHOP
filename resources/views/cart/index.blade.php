@@ -10,7 +10,7 @@
         @foreach($products as $product)
         @if(isset($cartItems[$product->id]))
         <div class="cart-item">
-            <img src="{{ asset('images/bottle.jpg') }}" alt="bottle">
+        <img src="{{ asset($product->image) }}" alt="{{ $product->name }}" class="product-img">
             <div class="cart-item-info">{{ $product->name }}<br>{{ $product->description }}</div>
             <div class="cart-item-quantity-container">
                 <form action="{{ route('cart.updateQuantity', $product->id) }}" method="POST">
