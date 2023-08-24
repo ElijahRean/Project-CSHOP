@@ -36,13 +36,14 @@ Route::get('/about', function () {
 
 Route::get('/checkout', function () {
     return view('checkout/checkout');
-});
+
 Route::get('/home', function () {
     return view('home');
 });
 
 // listing of the products. all products and a separate product. frontend page
 Route::get('/', [CandyController::class, 'frontPage'])->name('home');
+
 Route::get('/product/{id}', [CandyController::class, 'separateProduct'])->name('product.show');
 
 
