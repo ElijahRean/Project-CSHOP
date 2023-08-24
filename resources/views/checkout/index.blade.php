@@ -32,38 +32,45 @@
     </div>
     <div class="checkout-input-container">
         <label for="phone" class="checkout-input-name">Phone *</label>
-        <input type="text" name="phone" id="phone" class="checkout-input-field">
+        <input type="number" name="phone" id="phone" class="checkout-input-field">
     </div>
     <div class="checkout-input-container">
         <label for="zip" class="checkout-input-name">ZIP Code *</label>
         <input type="text" name="zip" id="zip" class="checkout-input-field">
     </div>
-    <table>
+    <div class="checkout-table ml-3 mt-4 mr-4 checkout-summary">
+    <table class="table">
         <thead>
             <tr>
-                <th>Product</th>
-                <th>Quantity</th>
-                <th>Price</th>
+                <th scope="col" class="px-0 py-1">Product</th>
+                <th scope="col" class="px-0 py-1">Quantity</th>
+                <th scope="col" class="px-0 py-1">Price</th>
             </tr>
         </thead>
         <tbody>
             @foreach ($cartItems as $cartItem)
                 <tr>
-                    <td>{{ $cartItem->product->name }}</td>
-                    <td>{{ $cartItem->quantity }}</td>
-                    <td>${{ $cartItem->product->price }}</td>
+                    <td scope="row" class="px-0 py-1">{{ $cartItem->product->name }}</td>
+                    <td scope="row" class="px-0 py-1">{{ $cartItem->quantity }}</td>
+                    <td scope="row" class="px-0 py-1">${{ $cartItem->product->price }}</td>
                 </tr>
             @endforeach
         </tbody>
         <tfoot>
             <tr>
-                <th colspan="2">Total:</th>
-                <th>${{ $total }}</th>
+                <th scope="row" class="px-0 py-1" colspan="2">Total:</th>
+                <th scope="row" class="px-0 py-1" >${{ $total }}</th>
             </tr>
         </tfoot>
     </table>
-    <button type="submit" class="proceed-payment">Proceed Payment</button>
+
+    </div>
+    <div class="checkout-button">
+        <button type="submit" class="proceed-payment btn-block" >Proceed Payment</button>
+    </div>
+
 
 </div>
+
 </form>
 @endsection
