@@ -32,7 +32,7 @@
                         <li><a href="#">Weird candies</a></li>
                     </ul>
                 </li>
-                <li class=""><a href=#>About us</a></li>
+                <li class=""><a href="{{ route('about') }}">About us</a></li>
 
             </ul>
             <div class="rightSide">

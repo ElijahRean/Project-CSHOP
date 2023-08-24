@@ -26,16 +26,6 @@ use App\Http\Controllers\CheckoutController;
 |
 */
 
-// Route::get('/', function () {
-//     return view('home');
-// });
-Route::get('/search-candies', [SearchController::class, 'search'])->name('candies.search');
-
-// Route::get('/product/{productName}', [ProductController::class, 'show']);
-Route::get('/product', function () {
-    return view('products/productDetailsPage');
-});
-
 Route::get('/cart', function () {
     return view('cart/cart');
 });
@@ -46,10 +36,19 @@ Route::get('/about', function () {
 
 Route::get('/checkout', function () {
     return view('checkout/checkout');
+
+Route::get('/home', function () {
+    return view('home');
 });
 
-Route::get('/', [\App\Http\Controllers\CandyController::class, 'frontPage'])->name('products');
+// listing of the products. all products and a separate product. frontend page
+Route::get('/', [CandyController::class, 'frontPage'])->name('home');
+
 Route::get('/product/{id}', [CandyController::class, 'separateProduct'])->name('product.show');
+
+
+// product search route frontend page
+Route::get('/search-candies', [SearchController::class, 'search'])->name('candies.search');
 
 Auth::routes();
 
@@ -58,17 +57,10 @@ Route::middleware(['auth', 'admin'])->group(function () {
         return view('adminpanel/admin_page');
     });
 });
-//////////////// Cart
 
-Route::prefix('cart')->group(function () {
-    Route::get('/', [CartController::class, 'index'])->name('cart.index');
-    Route::post('add/{product}', [CartController::class, 'add'])->name('cart.add');
-    Route::post('remove/{product}', [CartController::class, 'remove'])->name('cart.remove');
-    Route::post('update/{product}', [CartController::class, 'updateQuantity'])->name('cart.updateQuantity');
 
-});
 //////////////// Products
-    Route::middleware(['auth', 'admin'])->prefix('admin')->name('admin.')->group(function () {
+Route::middleware(['auth', 'admin'])->prefix('admin')->name('admin.')->group(function () {
 
     // Dashboard
     Route::get('/', function () {
@@ -115,6 +107,17 @@ Route::prefix('cart')->group(function () {
 
 });
 
+//Cart
+Route::middleware(['auth'])->prefix('cart')->group(function () {
+    Route::get('/', [CartController::class, 'index'])->name('cart.index');
+    Route::post('add/{product}', [CartController::class, 'add'])->name('cart.add');
+    Route::post('add/{product}', [CartController::class, 'add'])->name('cart.add')->middleware('auth');
+    Route::post('remove/{product}', [CartController::class, 'remove'])->name('cart.remove');
+    Route::post('update/{product}', [CartController::class, 'updateQuantity'])->name('cart.updateQuantity');
+});
+
+
+////// add to cart zem middleware
 
 
 
@@ -127,7 +130,6 @@ Route::post('/contact', [ContactFormController::class, 'sendContactForm'])->name
 
 Route::get('/candies', [CandiesController::class, 'index'])->name('candies.index');
 Route::get('/candies/{id}', [CandiesController::class, 'show'])->name('candies.show');
-
 
 Route::get('/checkout', [CheckoutController::class, 'index'])->name('checkout.index');
 Route::post('/checkout/place-order', [CheckoutController::class, 'placeOrder'])->name('checkout.place-order');
