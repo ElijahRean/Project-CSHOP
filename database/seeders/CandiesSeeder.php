@@ -71,7 +71,7 @@ class CandiesSeeder extends Seeder
                 'price' => '9.99',
                 'color' => 'blue',
                 'description' => 'Unleash your inner child with our Mokomoko Mokolet candy. Whimsical candies, treat for taste buds and feast for eyes. Playful colors and delightful shapes.',
-                'image' => '/images/9.webp',
+                'image' => '/images/8.webp',
             ],
         ];
         DB::table('candies')->insert($candies);
