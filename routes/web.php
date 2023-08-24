@@ -11,6 +11,7 @@ use App\Http\Controllers\ProductController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\ContactFormController;
 use App\Http\Controllers\CandyController;
+use App\Http\Controllers\CheckoutController;
 
 
 
@@ -41,12 +42,11 @@ Route::get('/cart', function () {
 
 Route::get('/about', function () {
     return view('about/about');
-})->name('about');
 
 Route::get('/checkout', function () {
     return view('checkout/checkout');
 });
-
+*/
 Route::get('/', [\App\Http\Controllers\CandyController::class, 'frontPage'])->name('products');
 Route::get('/product/{id}', [CandyController::class, 'separateProduct'])->name('product.show');
 
@@ -64,6 +64,7 @@ Route::prefix('cart')->group(function () {
     Route::post('add/{product}', [CartController::class, 'add'])->name('cart.add');
     Route::post('remove/{product}', [CartController::class, 'remove'])->name('cart.remove');
     Route::post('update/{product}', [CartController::class, 'updateQuantity'])->name('cart.updateQuantity');
+
 });
 //////////////// Products
     Route::middleware(['auth', 'admin'])->prefix('admin')->name('admin.')->group(function () {
@@ -125,3 +126,7 @@ Route::post('/contact', [ContactFormController::class, 'sendContactForm'])->name
 
 Route::get('/candies', [CandiesController::class, 'index'])->name('candies.index');
 Route::get('/candies/{id}', [CandiesController::class, 'show'])->name('candies.show');
+
+
+Route::get('/checkout', [CheckoutController::class, 'index'])->name('checkout.index');
+Route::post('/checkout/place-order', [CheckoutController::class, 'placeOrder'])->name('checkout.place-order');

@@ -51,7 +51,10 @@
         </div>
         <div class="cart-footer">
             <div class="cart-total">$0.00</div>
-            <button class="cart-checkout">Checkout</button>
+            <form action="{{ route('checkout.index') }}" method="get">
+    @csrf
+    <button type="submit">Checkout</button>
+</form>
         </div>
     </div>
 
