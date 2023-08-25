@@ -26,7 +26,7 @@
 
         // Add event listener to the minus button
         minusButton.addEventListener("click", function() {
-            if (quantity > 0) {
+            if (quantity > 1) {
                 quantity--;
                 updateQuantityDisplay();
             }

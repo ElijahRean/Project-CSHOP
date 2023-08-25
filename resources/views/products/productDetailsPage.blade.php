@@ -25,8 +25,8 @@
                         @csrf
                         <div id="quantityContainer"><strong>Quantity:</strong>
                             <button type="button" class="quantity-btn minus-btn">-</button>
-                                <div class="quantityContainer" id="quantityDisplay">0</div>
-                                <input class="d-none" id="quantityValue" type="number" value="0" name="quantity">
+                                <div class="quantityContainer" id="quantityDisplay">1</div>
+                                <input class="d-none" id="quantityValue" type="number" value="1" name="quantity">
                             <button type="button" class="quantity-btn plus-btn">+</button>
                         </div>
                         <div class="gradient-buttons">
