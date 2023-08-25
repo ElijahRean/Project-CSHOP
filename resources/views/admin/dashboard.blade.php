@@ -11,7 +11,7 @@
             <a href="{{ route('admin.users.index')}}" class="nav-link">User list</a>
         </li>
         <li class="nav-item d-none d-sm-inline-block">
-            <a href="{{ route('products')}}" class="nav-link">At home page</a>
+            <a href="{{ route('home')}}" class="nav-link">At home page</a>
         </li>
     </ul>
 
