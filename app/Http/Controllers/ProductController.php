@@ -23,14 +23,12 @@ class ProductController extends Controller
     // Add a new product
     public function store(Request $request, Product $product) {
 
-        // dd($request->all());
-
         $data = $request->validate([
             'name' =>'required|max:255',
             'color' =>'required|max:255',
             'description' =>'required|max:1055',
             'price' =>'required|numeric',
-            'image' =>'required|image|mimes:jpg,png,jpeg,gif,svg|max:2048',
+            'image' =>'required|image|mimes:jpg,png,jpeg,gif,svg,webp|max:2048',
         ]);
 
         // Image upload
