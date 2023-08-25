@@ -18,23 +18,23 @@
 
         <div class="form-group">
             <label for="name">Name</label>
-            <input id="name" class="form-control" type="text" name="name" value="{{ $product->name }}" required>
+            <input id="name" class="form-control @error('name') is-invalid @enderror" type="text" name="name" value="{{ $product->name }}" required>
         </div>
 
         <div class="form-group mt-4">
             <label for="color">Color</label>
-            <input id="color" class="form-control" type="text" name="color" value="{{ $product->color }}" required>
+            <input id="color" class="form-control @error('color') is-invalid @enderror" type="text" name="color" value="{{ $product->color }}" required>
         </div>
 
         <div class="form-group mt-4">
             <label for="description">Description</label>
-            <input id="description" class="form-control" type="text" name="description"
+            <input id="description" class="form-control @error('description') is-invalid @enderror" type="text" name="description"
                 value="{{ $product->description }}" required>
         </div>
 
         <div class="form-group mt-4">
             <label for="price">Price</label>
-            <input id="price" class="form-control" type="number" step="0.01" pattern="[0-9]*" name="price"
+            <input id="price" class="form-control @error('price') is-invalid @enderror" type="number" step="0.01" pattern="[0-9]*" name="price"
                 value="{{ $product->price }}" required>
         </div>
 
@@ -45,7 +45,7 @@
             @if ($product->image)
                 <div class="mt-3">
                     <label>Current Image:</label><br>
-                    <img src="{{ asset($product->image) }}" alt="Product Image" width="400px">
+                    <img src="{{ asset($product->image) }}" alt="Product Image" width="400px" accept="image/*">
                 </div>
             @endif
         </div>
